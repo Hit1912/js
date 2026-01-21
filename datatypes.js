@@ -41,3 +41,12 @@ let g = null;
 // Undefined
 //you don't give a value , by default value 
 let h; 
+
+// Symbol
+let u1 = Symbol("uid");
+let u2 = Symbol("uid");
+// chreck u1 = = u2
+let obj = {uid : 1,name : "test",email : "test@example.com"};
+let u3 = "uid" ;
+let u4 = Symbol("uid");
+//obj [u3] --> "001";
