@@ -50,3 +50,22 @@ let obj = {uid : 1,name : "test",email : "test@example.com"};
 let u3 = "uid" ;
 let u4 = Symbol("uid");
 //obj [u3] --> "001";
+
+//BigInt:
+//Chaak range of number , Number.Max_SAFE_INTEGER
+let number = 9007199254740991;
+number= number+6;
+let num2 = 9007199254740991n;
+num2 + 4n; 
+
+//<-------- Non-Primitive Data Types -------->
+//Type : Object, Array, Function
+let temp_array = ["user1","user2","user3"]; 
+let temp_obj ={ name:"test", age:25, phone_number:"1234567890"};
+let profiles = [
+{name:"test1", age:25, phone_number:"1234567890"},
+{name:"test2", age:26, phone_number:"1234567891"},
+{name:"test3", age:27, phone_number:"1234567892"}
+];
+function name (params){}
+
