@@ -44,3 +44,4 @@ Outside: 10
 Why:-
 let is block-scoped.
 The inner a exists only inside the block and does not affect the outer a.
+
