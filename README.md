@@ -1,157 +1,54 @@
-## VARIABLE OF JAVASCRIPT
-## Example 1
+# 📘 JavaScript Variables & Data Types
 
-console.log(nm);
+This repository explains **JavaScript variable behavior and data type coercion**
+with simple examples and clear explanations.  
+Useful for **beginners**, **interview prep**, and **revision**.
 
-let nm = "name";
+---
 
-❌ Error :- (ReferenceError)
+## 📌 VARIABLES IN JAVASCRIPT
 
-Why :-
-let variables are not hoisted in a usable way.
-Accessing nm before declaration causes a Temporal Dead Zone (TDZ) error.
+### 🔹 Variable Hoisting & Scope
 
-## Example 2
+| Example | Code | Output | Explanation |
+|------|------|--------|-------------|
+| **1** | `console.log(nm); let nm = "name";` | ❌ ReferenceError | `let` variables are hoisted but not initialized. Accessing before declaration causes a **Temporal Dead Zone (TDZ)** error. |
+| **2** | `console.log(b); var b = "username";` | `undefined` | `var` is hoisted and initialized with `undefined`. |
+| **3** | `var x = 1; { var x = 2; } console.log(x);` | `2` | `var` is **not block-scoped**. Inner value overwrites outer value. |
+| **4** | `let a = 10; { let a = 20; console.log(a); } console.log(a);` | `Inside: 20`<br>`Outside: 10` | `let` is **block-scoped**. Inner variable does not affect outer variable. |
 
-console.log(b);
+---
 
-var b = "username";
+## 📌 DATA TYPES & TYPE COERCION
 
-✅ Output :- undefined
+### 🔹 JavaScript Type Conversion Examples
 
-Why :-
-var is hoisted to the top and initialized with undefined.
-So b exists but has no value at the time of console.log.
+| Example | Expression | Output | Explanation |
+|------|------------|--------|-------------|
+| **1** | `true + false` | `1` | `true → 1`, `false → 0` |
+| **2** | `null + 1` | `1` | `null` converts to `0` |
+| **3** | `"12" + 12` | `"1212"` | `+` with a string performs **concatenation** |
+| **4** | `!!undefined` | `false` | `undefined` is falsy |
+| **5** | `"12" - 1` | `11` | `-` forces numeric conversion |
+| **6** | `typeof NaN` | `"number"` | `NaN` is a failed numeric operation but still a number |
 
-## Example 3
+---
 
-var x = 1;
+## 📌 UNDEFINED vs NULL
 
-{
+### 🔹 Comparison Table
 
-    var x = 2;
+| Feature | `undefined` | `null` |
+|------|-------------|--------|
+| Meaning | Variable declared but not assigned | Explicit empty value |
+| Assigned by | JavaScript | Developer |
+| Type | `"undefined"` | `"object"` (JavaScript bug) |
+| Falsy | ✅ | ✅ |
 
-}
-
-console.log(x);
-
-✅ Output :- 2
-
-Why :- 
-var is not block-scoped.
-The value inside the block overwrites the global value.
-
-## Example 4
-
-let a = 10;
-
-{
-
-    let a = 20;
-   
-    console.log("Inside:", a);
-
-}
-
-console.log("Outside:", a);
-
-✅ Output :-
-
-Inside: 20
-
-Outside: 10
-
-Why :-
-let is block-scoped.
-The inner a exists only inside the block and does not affect the outer a.
-
-## DATA TYPE OF JAVASCRIPT
-
-## Example 1
-
-true + false
-
-✅ Output :- 1
-
-Why :-
-true  → 1
-
-false → 0
-
-1 + 0 = 1
-
-## Example 2
-
-null + 1
-
-✅ Output :- 1
-
-Why :-
-null → 0
-
-0 + 1 = 1
-
-## Example 3
-
-"12" + 12
-
-✅ Output :- '1212'
-
-Why :-
-"12" + "12" = "1212"
-
-## Example 4
-
-!!undefined
-
-✅ Output :- false
-
-Why :-
-undefined is falsy
-
-!undefined → true
-
-!!undefined → false
-
-## Example 5
-
-"12" - 1
-
-✅ Output :- 11
-
-Why :-
-forces numeric conversion:
-
-Number("12") - 1 = 11
-
-## Example 6
-
-typeof NaN
-
-✅ Output :- number
-
-Why :-
-NaN means Not-a-Number
-
-It is the result of an invalid numeric operation
-
-Still belongs to the number data type
-
-## Example 7
-
-Undefined vs Null
-
+### Example
+```js
 let x;
-
-✅ Output :- 
-
-console.log(x);
+console.log(x); // undefined
 
 let y = null;
-
-console.log(y);
-
-undefined
-
-Why :-
-let x; = undefined and let y = null; = null
+console.log(y); // null
