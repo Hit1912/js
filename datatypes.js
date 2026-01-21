@@ -69,3 +69,27 @@ let profiles = [
 ];
 function name (params){}
 
+//Dyanamic Typing
+let u_name = "username"; // string
+u_name = 25; // number
+u_name = {}; // object
+//javascript ---> typescript(ts)
+
+// typeof quirks
+// typeof 12
+// check type of variable use --> ex. typeof NaN, typeof
+// null, 1 + "1", 1 == "1", 1 === "1"
+// why typeof NaN --> number
+// NaN is a failed number oprations that why that type is number
+// ex. "hello" - 5 --> NaN
+
+//Type Conversion
+//"5" + 1 // + --> value Add and Coeration (Mix)
+//"5" -1 
+
+//Truthy and Falsy Values
+//0, false , "", null, undefined, NaN ,document.all ,--> false
+//ex. !!0 ---> check value is true or false
+//ex. if(null){}, js convert it into false
+//ex. if(-1){}, js convert it into true
+//All ----> true
