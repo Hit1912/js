@@ -1,8 +1,4 @@
-# 📘 JavaScript Variables & Data Types
-
-This repository explains **JavaScript variable behavior and data type coercion**
-with simple examples and clear explanations.  
-Useful for **beginners**, **interview prep**, and **revision**.
+# 📘 JavaScript Variables
 
 ---
 
@@ -19,7 +15,7 @@ Useful for **beginners**, **interview prep**, and **revision**.
 
 ---
 
-## 📌 DATA TYPES & TYPE COERCION
+## 📌 DATA TYPES 
 
 ### 🔹 JavaScript Type Conversion Examples
 
@@ -45,10 +41,3 @@ Useful for **beginners**, **interview prep**, and **revision**.
 | Type | `"undefined"` | `"object"` (JavaScript bug) |
 | Falsy | ✅ | ✅ |
 
-### Example
-```js
-let x;
-console.log(x); // undefined
-
-let y = null;
-console.log(y); // null
