@@ -45,10 +45,3 @@ Useful for **beginners**, **interview prep**, and **revision**.
 | Type | `"undefined"` | `"object"` (JavaScript bug) |
 | Falsy | ✅ | ✅ |
 
-### Example
-```js
-let x;
-console.log(x); // undefined
-
-let y = null;
-console.log(y); // null
