@@ -41,3 +41,71 @@
 | Type | `"undefined"` | `"object"` (JavaScript bug) |
 | Falsy | ✅ | ✅ |
 
+# 📘 JavaScript Operators Guide
+
+This repository contains a simple and beginner-friendly explanation of **JavaScript Operators** with examples.
+
+---
+
+## 📌 Types of Operators in JavaScript
+
+- Arithmetic Operators  
+- Comparison Operators  
+- Logical Operators  
+- Assignment Operators  
+- Unary Operators  
+- Ternary Operator  
+
+---
+
+## ➕ Arithmetic Operators
+
+Used to perform mathematical operations.
+
+| Operator | Description | Example |
+|--------|------------|---------|
+| `+` | Addition / Concatenation | `1 + 2 → 3` <br> `"user" + " Name" → "user Name"` |
+| `-` | Subtraction | `5 - 2 → 3` |
+| `*` | Multiplication | `2 * 3 → 6` |
+| `/` | Division | `6 / 2 → 3` |
+| `%` | Modulus (Remainder) | `5 % 2 → 1` |
+| `**` | Exponentiation | `2 ** 3 → 8` |
+| `++` | Increment | `a++` |
+| `--` | Decrement | `a--` |
+
+⚠️ **Note:**  
+- `5 + "5"` → `"55"` (Concatenation)  
+- `5 + 5` → `10` (Addition)
+
+---
+
+## 🔍 Comparison Operators
+
+Used to compare two values.
+
+| Operator | Description | Example |
+|--------|------------|---------|
+| `==` | Equal (value only) | `5 == "5" → true` |
+| `===` | Strict Equal (value + type) | `5 === "5" → false` |
+| `!=` | Not Equal (value only) | `5 != "5" → false` |
+| `!==` | Strict Not Equal | `5 !== "5" → true` |
+| `>` | Greater Than | `5 > 3 → true` |
+| `<` | Less Than | `2 < 4 → true` |
+| `>=` | Greater or Equal | `5 >= 5 → true` |
+| `<=` | Less or Equal | `3 <= 5 → true` |
+
+---
+
+## 🔗 Logical Operators
+
+Used to combine multiple conditions.
+
+| Operator | Description | Example |
+|--------|------------|---------|
+| `&&` | Logical AND | `true && false → false` |
+| `||` | Logical OR | `true || false → true` |
+| `!` | Logical NOT | `!true → false` |
+
+**Example:**
+```js
+12 < 10 && 14 < 15 // false
