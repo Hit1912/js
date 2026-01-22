@@ -43,8 +43,6 @@
 
 # 📘 JavaScript Operators Guide
 
-This repository contains a simple and beginner-friendly explanation of **JavaScript Operators** with examples.
-
 ---
 
 ## 📌 Types of Operators in JavaScript
@@ -60,8 +58,6 @@ This repository contains a simple and beginner-friendly explanation of **JavaScr
 
 ## ➕ Arithmetic Operators
 
-Used to perform mathematical operations.
-
 | Operator | Description | Example |
 |--------|------------|---------|
 | `+` | Addition / Concatenation | `1 + 2 → 3` <br> `"user" + " Name" → "user Name"` |
@@ -73,15 +69,9 @@ Used to perform mathematical operations.
 | `++` | Increment | `a++` |
 | `--` | Decrement | `a--` |
 
-⚠️ **Note:**  
-- `5 + "5"` → `"55"` (Concatenation)  
-- `5 + 5` → `10` (Addition)
-
 ---
 
 ## 🔍 Comparison Operators
-
-Used to compare two values.
 
 | Operator | Description | Example |
 |--------|------------|---------|
