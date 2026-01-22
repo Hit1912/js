@@ -106,6 +106,36 @@ Used to combine multiple conditions.
 | `||` | Logical OR | `true || false → true` |
 | `!` | Logical NOT | `!true → false` |
 
-**Example:**
-```js
-12 < 10 && 14 < 15 // false
+## 📝 Assignment Operators
+
+Used to assign values to variables.
+
+| Operator | Example | Meaning |
+|--------|--------|--------|
+| `=` | `a = 5` | Assign |
+| `+=` | `a += 3` | `a = a + 3` |
+| `-=` | `a -= 2` | `a = a - 2` |
+| `*=` | `a *= 4` | `a = a * 4` |
+| `/=` | `a /= 2` | `a = a / 2` |
+| `%=` | `a %= 3` | `a = a % 3` |
+
+## 🔁 Unary Operators
+
+Operate on a single operand.
+
+| Operator | Description | Example |
+|--------|------------|---------|
+| `++` | Increment | `a++` |
+| `--` | Decrement | `a--` |
+| `+` | Convert to number | `+a` |
+| `-` | Negate number | `-a` |
+
+## ❓ Ternary Operator
+
+Used as a short form of `if-else`.
+
+| Part | Description | Example |
+|-----|------------|---------|
+| Condition | Expression to evaluate | `age >= 18` |
+| `?` | If condition is true | `"Yes"` |
+| `:` | If condition is false | `"No"` |
