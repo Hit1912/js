@@ -1,8 +1,4 @@
-# 📘 JavaScript Variables & Data Types
-
-This repository explains **JavaScript variable behavior and data type coercion**
-with simple examples and clear explanations.  
-Useful for **beginners**, **interview prep**, and **revision**.
+# 📘 JavaScript 
 
 ---
 
@@ -19,7 +15,7 @@ Useful for **beginners**, **interview prep**, and **revision**.
 
 ---
 
-## 📌 DATA TYPES & TYPE COERCION
+## 📌 DATA TYPES 
 
 ### 🔹 JavaScript Type Conversion Examples
 
