@@ -211,7 +211,6 @@ switch(x){
       console.log("Three");
 }
 
-
 /*---> Exercise 2 <--- */
 // function getGrade(score) {
 //   switch (true) {
@@ -232,10 +231,11 @@ switch(x){
 //   }
 // }
 
-// console.log(getGrade(85));  // Output: A
+// console.log(getGrade(85));  
 
 
 /*---> Exercise 3 <--- */
+
 function game(player1, player2) {
   switch (player1) {
     case "rock":
@@ -272,7 +272,6 @@ function game(player1, player2) {
       return "Invalid Input";
   }
 }
-
-console.log(game("rock", "scissors"));   // Output: rock
-console.log(game("paper", "rock"));      // Output: paper
-console.log(game("scissors", "paper"));  // Output: scissors
+console.log(game("rock", "scissors"));   
+console.log(game("paper", "rock"));      
+console.log(game("scissors", "paper"));  
