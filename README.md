@@ -15,7 +15,7 @@
 
 ---
 
-# 🧠 JavaScript Hoisting, Scope & `const` – Exercises
+# 🧠 JavaScript Exercises –  Javascript Variable
 
 Clean, conceptual and **interview‑ready explanations** for `var`, `let`, `const`, hoisting and block scope ✨
 

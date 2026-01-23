@@ -43,3 +43,24 @@ else{
 }
 
 
+
+// If...else if...else Statement
+/*
+if (condition1){
+    // code block 1
+} 
+else if (condition2){
+    // code block 2
+}   else {}
+*/
+
+let loggedin = false;
+let admin = false;
+if (loggedin && admin){
+    console.log("Welcome Admin");
+} else if (loggedin ){
+    console.log("Welcome User");
+} else {
+    console.log("Please log in");
+}
+
