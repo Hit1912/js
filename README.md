@@ -1636,11 +1636,11 @@ for (let i = 1; i <= 10; i++) {
 8
 9
 10
-
+```
 ---
 
 ### Example 2 — Print 10 to 1
-
+```js
 for (let k = 10; k >= 1; k--) {
   console.log(k);
 }
@@ -1657,11 +1657,11 @@ for (let k = 10; k >= 1; k--) {
 3
 2
 1
-
+```
 ---
 
 ### Example 3 — Print "Hello World" 10 times
-
+```js
 for (let j = 10; j >= 1; j--) {
   console.log("Hello World");
 }
@@ -1679,11 +1679,11 @@ Hello World
 Hello World
 Hello World
 
-
+```
 ---
 
 ### Example 5 — Print odd numbers 1 to 20
-
+```js
 for (let n = 1; n <= 20; n += 2) {
   console.log(n);
 }
@@ -1700,8 +1700,8 @@ for (let n = 1; n <= 20; n += 2) {
 15
 17
 19
-
 ```
+
 # 🔹 2) while Loop Examples
 
 ## Example 6 — while loop 1 to 10
