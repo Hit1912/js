@@ -42,9 +42,7 @@
 | Falsy | ✅ | ✅ |
 
 ---
-# 🔄 JavaScript Type Coercion & Special Values
-
-Beautifully explained examples to understand **type conversion, coercion, NaN, null vs undefined** 💡✨
+# 🔄 JavaScript Exercises –  DATA TYPES 
 
 ---
 
