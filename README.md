@@ -655,3 +655,131 @@ Everything else 😄
 | Non‑Primitive | Reference | Reference |
 
 ---
+# 📘 JavaScript Exercises – Data Type
+
+## 🔹 Example 1: `true + false`
+
+```js
+true + false;
+```
+
+**Output:** `1`
+
+**Why:**
+
+* `true` is converted to `1`
+* `false` is converted to `0`
+* `1 + 0 = 1`
+
+---
+
+## 🔹 Example 2: `null + 1`
+
+```js
+null + 1;
+```
+
+**Output:** `1`
+
+**Why:**
+
+* `null` is converted to `0`
+* `0 + 1 = 1`
+
+---
+
+## 🔹 Example 3: `"12" + 12`
+
+```js
+"12" + 12;
+```
+
+**Output:** `"1212"`
+
+**Why:**
+
+* `+` with a string performs **string concatenation**
+* Number `12` is converted to string
+
+---
+
+## 🔹 Example 4: `!!undefined`
+
+```js
+!!undefined;
+```
+
+**Output:** `false`
+
+**Why:**
+
+* `undefined` is a falsy value
+* `!undefined` → `true`
+* `!!undefined` → `false`
+
+---
+
+## 🔹 Example 5: `"12" - 1`
+
+```js
+"12" - 1;
+```
+
+**Output:** `11`
+
+**Why:**
+
+* `-` operator forces **number conversion**
+* `"12"` → `12`
+* `12 - 1 = 11`
+
+---
+
+## 🔹 Why is `typeof NaN` → `number`?
+
+```js
+typeof NaN;
+```
+
+**Output:** `"number"`
+
+**Why:**
+
+* `NaN` means **Not a Number**
+* It is the result of an **invalid numeric operation**
+* JavaScript still treats it as a number type
+
+```js
+"hello" * 5; // NaN
+```
+
+---
+
+## 🔹 Undefined vs Null
+
+### Example:
+
+```js
+let x;
+console.log(x);
+
+let y = null;
+console.log(y);
+```
+
+**Output:**
+
+```txt
+undefined
+null
+```
+
+### Difference Table:
+
+| Feature | undefined                          | null                    |
+| ------- | ---------------------------------- | ----------------------- |
+| Meaning | Variable declared but not assigned | Intentional empty value |
+| Type    | undefined                          | object                  |
+| Set by  | JavaScript                         | Developer               |
+
+---
