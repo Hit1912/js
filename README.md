@@ -1619,7 +1619,7 @@ They help to repeat tasks easily.
 ## 🔹 1) `for` Loop Examples
 
 ### Example 1 — Print 1 to 10
-```js
+
 for (let i = 1; i <= 10; i++) {
   console.log(i);
 }
