@@ -1701,4 +1701,167 @@ for (let n = 1; n <= 20; n += 2) {
 17
 19
 
+```
 # 🔹 2) while Loop Examples
+
+## Example 6 — while loop 1 to 10
+
+let d = 1;
+while (d <= 10) {
+  console.log("while loop :", d);
+  d++;
+}
+
+**Output:**
+
+while loop : 1
+while loop : 2
+while loop : 3
+while loop : 4
+while loop : 5
+while loop : 6
+while loop : 7
+while loop : 8
+while loop : 9
+while loop : 10
+
+## Example 7 — 50 to 20
+
+let e = 50;
+while (e >= 20) {
+  console.log("Make It True Loops E:", e);
+  e--;
+}
+
+
+**Output:**
+
+Make It True Loops E: 50
+Make It True Loops E: 49
+Make It True Loops E: 48
+...
+Make It True Loops E: 20
+
+## Example 8 — 60 to 20
+
+let f = 60;
+while (f >= 20) {
+  console.log("Make It True Loop F :", f);
+  f--;
+}
+
+**Output:**
+
+Make It True Loop F : 60
+Make It True Loop F : 59
+Make It True Loop F : 58
+...
+Make It True Loop F : 20
+
+## Example 9 — 30 to 20
+
+let c = 30;
+while (c >= 20) {
+  console.log("Make It True Loop C :", c);
+  c--;
+}
+
+
+**Output:**
+
+Make It True Loop C : 30
+Make It True Loop C : 29
+...
+Make It True Loop C : 20
+
+
+## Example 10 — 20 to 30
+
+let h = 20;
+while (h <= 30) {
+  console.log("Make It True Loop H :", h);
+  h++;
+}
+
+**Output:**
+
+Make It True Loop H : 20
+Make It True Loop H : 21
+...
+Make It True Loop H : 30
+
+## Example 11 — 50 to 20
+
+let g = 50;
+while (g >= 20) {
+  console.log("Make It True Loop G :", g);
+  g--;
+}
+
+**Output:**
+
+Make It True Loop G : 50
+Make It True Loop G : 49
+...
+Make It True Loop G : 20
+
+## Example 12 — 20 to 30
+
+let i = 20;
+while (i <= 30) {
+  console.log("Make It True Loop I :", i);
+  i++;
+}
+
+**Output:**
+
+Make It True Loop I : 20
+Make It True Loop I : 21
+...
+Make It True Loop I : 30
+
+## Example 13 — 1 to 10 
+
+let j = 1;
+while (j <= 10) {
+  console.log("Make It True Loop J :", j);
+  j++;
+}
+
+**Output:**
+
+Make It True Loop J : 1
+Make It True Loop J : 2
+...
+Make It True Loop J : 10
+
+## Example 14 — 50 to 20
+
+let k = 50;
+while (k >= 20) {
+  console.log("Make It True Loop K :", k);
+  k--;
+}
+
+**Output:**
+
+Make It True Loop K : 50
+Make It True Loop K : 49
+...
+Make It True Loop K : 20
+
+## Example 15 — 50 to 20
+
+let l = 50;
+while (l >= 20) {
+  console.log("Make It True Loop L :", l);
+  l--;
+}
+
+**Output:**
+
+Make It True Loop L : 50
+Make It True Loop L : 49
+...
+Make It True Loop L : 20
+
