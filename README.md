@@ -1596,3 +1596,109 @@ scissors
 * Winner is returned based on the rules.
 
 ---
+
+# 📘 JavaScript Loops
+
+Loops are used to run the same block of code multiple times.  
+They help to repeat tasks easily.
+
+---
+
+## ✅ Types of Loops in JavaScript
+
+| Loop Type    | Use Case                                    |
+|-------------|---------------------------------------------|
+| `for`       | When you know the number of iterations      |
+| `while`     | When the condition is checked before the loop |
+| `do...while`| When the loop must run at least once        |
+| `for...in`  | Loop through object keys                    |
+| `for...of`  | Loop through array values                   |
+
+---
+
+## 🔹 1) `for` Loop Examples
+
+### Example 1 — Print 1 to 10
+```js
+for (let i = 1; i <= 10; i++) {
+  console.log(i);
+}
+
+**Output:**
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+---
+
+### Example 2 — Print 10 to 1
+
+for (let k = 10; k >= 1; k--) {
+  console.log(k);
+}
+
+**Output:**
+
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+
+---
+
+### Example 3 — Print "Hello World" 10 times
+
+for (let j = 10; j >= 1; j--) {
+  console.log("Hello World");
+}
+
+**Output:**
+
+Hello World
+Hello World
+Hello World
+Hello World
+Hello World
+Hello World
+Hello World
+Hello World
+Hello World
+Hello World
+
+
+---
+
+### Example 5 — Print odd numbers 1 to 20
+
+for (let n = 1; n <= 20; n += 2) {
+  console.log(n);
+}
+
+**Output:**
+
+1
+3
+5
+7
+9
+11
+13
+15
+17
+19
+
+# 🔹 2) while Loop Examples
