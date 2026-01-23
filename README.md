@@ -1617,7 +1617,7 @@ They help to repeat tasks easily.
 ---
 
 ## 🔹 1) `for` Loop Examples
-
+```js
 ### Example 1 — Print 1 to 10
 
 for (let i = 1; i <= 10; i++) {
