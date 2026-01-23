@@ -129,3 +129,185 @@ Used as a short form of `if-else`.
 | Condition | Expression to evaluate | `age >= 18` |
 | `?` | If condition is true | `"Yes"` |
 | `:` | If condition is false | `"No"` |
+
+
+## Excercise
+Example 1 
+
+let x = 10;
+let y = 20;
+
+if (x > 5 && y > 5) {
+  console.log("Both are greater than 5");
+} else {
+  console.log("One or both are not greater than 5");
+}
+
+ Output:-
+ ✔️  Both are greater than 5
+
+Example 2
+
+let isAdmin = true;
+let isLoggedIn = false;
+
+if (isAdmin || isLoggedIn) {
+  console.log("Access granted");
+} else {
+  console.log("Access Denied");
+}
+
+ Output:-
+  ✔️ Access granted
+
+Example 3
+
+let temp = 35;
+
+if (!(temp > 30)) {
+  console.log("Hot day");
+} else {
+  console.log("Pleasant day");
+}
+
+Output:-
+❌ Pleasant day
+
+
+Example 4
+
+if (temp > 30) {
+  console.log("Hot day");
+}
+
+Output:-
+
+
+Example 5
+
+let score = 78;
+
+let grade = score >= 90 ? "A" :
+            score >= 80 ? "B" :
+            score >= 70 ? "C" : "D";
+
+console.log("Grade:", grade);
+
+
+Output:-
+✔️ Grade: C
+
+Example 6
+
+let points = 120;
+
+let status = points >= 100 ? "Gold" :
+             points >= 50 ? "Silver" : "Bronze";
+
+console.log("Status:", status);
+
+Output:-
+✔️ Status: Gold
+
+Example 7
+
+let loggedIn = true;
+let hasToken = false;
+
+let access = loggedIn && hasToken ? "Allow" : "Deny";
+console.log("access:", access);
+
+Output:-
+✔️ access: Deny
+
+
+Example 8
+
+let a = 5;
+a++;
+console.log(a);
+
+Output:-
+✔️ 6
+
+
+Example 9
+
+let a = 8;
+++a;
+console.log(a);
+
+Output:-
+✔️ 9
+
+Example 10
+
+let b = 4;
+let c = b++;
+console.log(b, c);
+
+Output:-
+✔️ 5 4
+
+
+Example 11
+
+let b = 4;
+let c = ++b;
+console.log(b, c);
+
+Output:-
+✔️ 5 5
+
+
+Example 12
+
+let m = 10;
+console.log(m--);
+console.log(m);
+
+Output:-
+✔️ 10
+    9
+
+Example 13
+
+let n = 5;
+let result = n++ + ++n;
+console.log(result);
+
+Output:-
+✔️ 12
+
+
+Example 14
+
+let likes = 100;
+
+function likePost() {
+  result ++likes; // ❌ INVALID
+}
+
+console.log(likePost());
+console.log(likes);
+
+
+Output:-
+❌ Uncaught SyntaxError
+
+Example 15
+
+let count = 5;
+
+if (count-- === 5) {
+  console.log("Matched");
+} else {
+  console.log("Not Matched");
+}
+
+Output:-
+✔️ Matched
+
+
+
+

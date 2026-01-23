@@ -107,3 +107,14 @@
 //In this example, the condition age >= 18 is evaluated. If it's true, the expression "Yes" is returned; otherwise, "No" is returned.
 
 
+/* ---> Excercise  <--- */
+//Example 1: Write a program to check if a number is even or odd using the modulus operator.
+
+// let x = 10;
+// let y = 20;
+
+// if (x > 5 && y > 5) {
+//   console.log("Both are greater than 5");
+// } else {
+//   console.log("One or both are not greater than 5");
+// }
