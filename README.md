@@ -41,6 +41,175 @@
 | Type | `"undefined"` | `"object"` (JavaScript bug) |
 | Falsy | ✅ | ✅ |
 
+---
+# 🔄 JavaScript Type Coercion & Special Values
+
+Beautifully explained examples to understand **type conversion, coercion, NaN, null vs undefined** 💡✨
+
+---
+
+## 🔹 Example 1
+
+```js
+true + false
+```
+
+**Output:**
+✔️ `1`
+
+🧠 **Explanation:**
+
+* `true` → `1`
+* `false` → `0`
+* `1 + 0 = 1`
+
+---
+
+## 🔹 Example 2
+
+```js
+null + 1
+```
+
+**Output:**
+✔️ `1`
+
+🧠 **Explanation:**
+
+* `null` is converted to `0`
+* `0 + 1 = 1`
+
+---
+
+## 🔹 Example 3
+
+```js
+"12" + 12
+```
+
+**Output:**
+✔️ `"1212"`
+
+🧠 **Explanation:**
+
+* `+` with a string performs **string concatenation**
+* Number `12` becomes string
+
+---
+
+## 🔹 Example 4
+
+```js
+!!undefined
+```
+
+**Output:**
+✔️ `false`
+
+🧠 **Explanation:**
+
+* `undefined` is a **falsy** value
+* `!undefined` → `true`
+* `!!undefined` → `false`
+
+📌 Double NOT (`!!`) is used to convert values into boolean.
+
+---
+
+## 🔹 Example 5
+
+```js
+"12" - 1
+```
+
+**Output:**
+✔️ `11`
+
+🧠 **Explanation:**
+
+* `-` operator forces **numeric conversion**
+* `"12"` → `12`
+* `12 - 1 = 11`
+
+---
+
+## ❓ Why `typeof NaN === "number"`
+
+```js
+typeof NaN
+```
+
+**Output:**
+✔️ `"number"`
+
+🧠 **Explanation:**
+
+* `NaN` means **Not a Valid Number**
+* It is the result of a **failed numeric operation**
+* JavaScript still treats it as a number type
+
+### ❌ Incorrect Example
+
+```js
+"hello" + 5
+```
+
+**Output:**
+✔️ `"hello5"`
+
+📌 This is **NOT NaN** because `+` does string concatenation.
+
+### ✅ Correct NaN Example
+
+```js
+"hello" - 5
+```
+
+**Output:**
+✔️ `NaN`
+
+---
+
+## 🔄 Undefined vs Null
+
+### 🔹 Undefined
+
+```js
+let x;
+console.log(x);
+```
+
+**Output:**
+✔️ `undefined`
+
+🧠 Variable declared but **not assigned** any value.
+
+---
+
+### 🔹 Null
+
+```js
+let y = null;
+console.log(y);
+```
+
+**Output:**
+✔️ `null`
+
+🧠 Value is **intentionally empty**.
+
+---
+
+## 📊 Quick Comparison
+
+| Feature | undefined    | null                |
+| ------- | ------------ | ------------------- |
+| Meaning | Not assigned | Intentionally empty |
+| Type    | undefined    | object (JS bug 😅)  |
+| Falsy   | ✅            | ✅                   |
+
+---
+
 # 📘 JavaScript Operators Guide
 
 ---
