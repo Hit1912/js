@@ -422,3 +422,236 @@ let j = 12;
 * ❌ Never create variables without declaration
 
 ✨ These practical rules are **very important for exams & interviews**.
+
+---
+
+# 📌 DATA TYPES IN JAVASCRIPT
+
+JavaScript is a **dynamically typed language**, which means variable types are decided at **runtime**, not at declaration time.
+
+```js
+let value = "hello"; // string
+value = 25;          // number
+value = true;        // boolean
+```
+
+---
+
+## 🔹 Types of Data Types
+
+JavaScript data types are divided into **two categories**:
+
+1. **Primitive (Value Types)**
+2. **Non‑Primitive (Reference Types)**
+
+---
+
+## 1️⃣ Primitive Data Types
+
+👉 Store **actual values**
+👉 Copied **by value**
+
+```js
+let a = 5;
+let b = a;
+b = 10;
+
+console.log(a); // 5
+console.log(b); // 10
+```
+
+📌 Changing `b` does **not** affect `a`.
+
+### 🔸 Primitive Types List
+
+| Type      | Description             | Example      |
+| --------- | ----------------------- | ------------ |
+| String    | Text data               | "hello"      |
+| Number    | Integers & decimals     | 25, 25.5     |
+| Boolean   | true / false            | true         |
+| Null      | Intentional empty value | null         |
+| Undefined | Declared, not assigned  | let x;       |
+| Symbol    | Unique identifier       | Symbol("id") |
+| BigInt    | Large integers          | 123n         |
+
+---
+
+### 🔹 String
+
+```js
+let name1 = "user";
+let name2 = 'admin';
+let name3 = `developer`;
+```
+
+---
+
+### 🔹 Number
+
+```js
+let age = 25;
+let price = 99.99;
+let loss = -10;
+```
+
+---
+
+### 🔹 Boolean
+
+```js
+let isLogin = true;
+let isAdmin = false;
+```
+
+---
+
+### 🔹 Null vs Undefined
+
+```js
+let x;
+let y = null;
+```
+
+| Feature     | undefined    | null                 |
+| ----------- | ------------ | -------------------- |
+| Meaning     | Not assigned | Intentionally empty  |
+| Type        | "undefined"  | "object" (JS bug 😅) |
+| Assigned by | JavaScript   | Developer            |
+| Falsy       | ✅            | ✅                    |
+
+---
+
+### 🔹 Symbol
+
+```js
+let id1 = Symbol("id");
+let id2 = Symbol("id");
+
+console.log(id1 === id2); // false
+```
+
+📌 Symbols are **always unique**.
+
+---
+
+### 🔹 BigInt
+
+```js
+let num = 9007199254740991;
+num = num + 10; // ❌ unsafe
+
+let big = 9007199254740991n;
+big + 10n; // ✅
+```
+
+📌 Used when numbers exceed `Number.MAX_SAFE_INTEGER`.
+
+---
+
+## 2️⃣ Non‑Primitive Data Types (Reference Types)
+
+👉 Store **references (memory address)**
+👉 Copied **by reference**
+
+```js
+let arr1 = [1, 2, 3];
+let arr2 = arr1;
+
+arr2.push(4);
+console.log(arr1); // [1,2,3,4]
+```
+
+---
+
+### 🔸 Non‑Primitive Types
+
+| Type     | Example                     |
+| -------- | --------------------------- |
+| Object   | `{ name: "user", age: 25 }` |
+| Array    | `["a", "b"]`                |
+| Function | `function test(){}`         |
+
+---
+
+### 🔹 Object
+
+```js
+let user = {
+  name: "test",
+  age: 25,
+  email: "test@example.com"
+};
+```
+
+---
+
+### 🔹 Array
+
+```js
+let users = ["user1", "user2", "user3"];
+```
+
+---
+
+### 🔹 Function
+
+```js
+function greet(name) {
+  return `Hello ${name}`;
+}
+```
+
+---
+
+## 🔄 Type Conversion (Coercion)
+
+| Expression     | Result |
+| -------------- | ------ |
+| `"5" + 1`      | "51"   |
+| `"5" - 1`      | 4      |
+| `true + false` | 1      |
+| `null + 1`     | 1      |
+
+---
+
+## ❓ Why `typeof NaN === "number"`
+
+```js
+typeof NaN; // "number"
+```
+
+📌 `NaN` is the result of a **failed numeric operation**, so JavaScript still treats it as a number.
+
+```js
+"hello" - 5; // NaN
+```
+
+---
+
+## ✅ Truthy & Falsy Values
+
+### ❌ Falsy Values
+
+```js
+false, 0, "", null, undefined, NaN, document.all
+```
+
+### ✅ Truthy Values
+
+Everything else 😄
+
+```js
+!!0;     // false
+!!"hi"; // true
+```
+
+---
+
+## 📊 Quick Summary
+
+| Category      | Stored As | Copied By |
+| ------------- | --------- | --------- |
+| Primitive     | Value     | Value     |
+| Non‑Primitive | Reference | Reference |
+
+---
