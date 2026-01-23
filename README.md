@@ -15,6 +15,145 @@
 
 ---
 
+# 🧠 JavaScript Hoisting, Scope & `const` – Exercises
+
+Clean, conceptual and **interview‑ready explanations** for `var`, `let`, `const`, hoisting and block scope ✨
+
+---
+
+## 🔹 Example 1 – `let` Hoisting (TDZ)
+
+```js
+console.log(nm);
+let nm = "name";
+```
+
+### ❌ Answer / Error:
+
+```
+ReferenceError: Cannot access 'nm' before initialization
+```
+
+### 🧠 Why:
+
+* `let` variables **are hoisted**
+* But they stay in **Temporal Dead Zone (TDZ)** until initialization
+* Accessing before declaration causes an error
+
+📌 `let` is hoisted but **not usable** before declaration.
+
+---
+
+## 🔹 Example 2 – `var` Hoisting
+
+```js
+console.log(b);
+var b = "username";
+```
+
+### ✅ Answer:
+
+```
+undefined
+```
+
+### 🧠 Why:
+
+* `var` variables are hoisted and **initialized with `undefined`**
+* No TDZ for `var`
+
+📌 This is why `var` is considered unsafe in modern JavaScript.
+
+---
+
+## 🔹 Example 3 – `var` Scope (Function Scope)
+
+```js
+var x = 1;
+{
+  var x = 2;
+}
+console.log(x);
+```
+
+### ✅ Answer:
+
+```
+2
+```
+
+### 🧠 Why:
+
+* `var` does **NOT** have block scope
+* Both declarations refer to the **same variable**
+
+📌 Blocks `{}` don’t matter for `var`.
+
+---
+
+## 🔹 Example 4 – `let` Block Scope
+
+```js
+let a = 10;
+{
+  let a = 20;
+  console.log("Inside:", a);
+}
+console.log("Outside:", a);
+```
+
+### ✅ Answer:
+
+```
+Inside: 20
+Outside: 10
+```
+
+### 🧠 Why:
+
+* `let` is **block scoped**
+* Inner block creates a **new variable**
+* Outer variable remains unchanged
+
+📌 This prevents accidental overwrites.
+
+---
+
+## 🔹 Example 5 – `const` with Objects
+
+```js
+const person = { name: "demo" };
+
+person.name = "user"; // ✅
+person = {};           // ❌
+```
+
+### ❌ Error:
+
+```
+TypeError: Assignment to constant variable
+```
+
+### 🧠 Why:
+
+* `const` **prevents reassignment**, not mutation
+* Object reference is constant
+* Object properties **can be changed**
+
+📌 `const` protects the reference, not the data inside.
+
+---
+
+## 📊 Quick Summary Table
+
+| Keyword | Hoisted | Block Scope | Reassign | TDZ |
+| ------- | ------- | ----------- | -------- | --- |
+| var     | ✅       | ❌           | ✅        | ❌   |
+| let     | ✅       | ✅           | ✅        | ✅   |
+| const   | ✅       | ✅           | ❌        | ✅   |
+
+---
+
 ## 📌 DATA TYPES 
 
 ### 🔹 JavaScript Type Conversion Examples
