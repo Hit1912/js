@@ -783,3 +783,438 @@ null
 | Set by  | JavaScript                         | Developer               |
 
 ---
+
+# 📘 JavaScript Operators Guide
+
+## ✅ What is an Operator?
+
+An **operator** is a symbol that performs an action on values or variables.
+
+Example:
+
+```js
+let x = 5 + 2; // + is operator
+```
+
+---
+
+## 🔹 Types of Operators in JavaScript
+
+### 1️⃣ Arithmetic Operators
+
+Used for math calculations.
+
+| Operator | Meaning                  | Example      |
+| -------- | ------------------------ | ------------ |
+| `+`      | Addition / Concatenation | `1 + 2 → 3`  |
+| `-`      | Subtraction              | `5 - 2 → 3`  |
+| `*`      | Multiplication           | `2 * 3 → 6`  |
+| `/`      | Division                 | `6 / 2 → 3`  |
+| `%`      | Modulus (remainder)      | `5 % 2 → 1`  |
+| `**`     | Exponent                 | `2 ** 3 → 8` |
+| `++`     | Increment                | `a++`        |
+| `--`     | Decrement                | `a--`        |
+
+---
+
+### 2️⃣ Comparison Operators
+
+Used to compare values.
+
+| Operator | Meaning                  | Example             |
+| -------- | ------------------------ | ------------------- |
+| `==`     | Equal (value only)       | `5 == "5" → true`   |
+| `===`    | Equal (value + type)     | `5 === "5" → false` |
+| `!=`     | Not equal                | `5 != "5" → false`  |
+| `!==`    | Not equal (value + type) | `5 !== "5" → true`  |
+| `>`      | Greater than             | `5 > 3 → true`      |
+| `<`      | Less than                | `2 < 4 → true`      |
+| `>=`     | Greater or equal         | `5 >= 5 → true`     |
+| `<=`     | Less or equal            | `3 <= 5 → true`     |
+
+---
+
+### 3️⃣ Logical Operators
+
+Used to combine conditions.
+
+| Operator | Meaning | Example                 |    |       |   |               |
+| -------- | ------- | ----------------------- | -- | ----- | - | ------------- |
+| `&&`     | AND     | `true && false → false` |    |       |   |               |
+| `        |         | `                       | OR | `true |   | false → true` |
+| `!`      | NOT     | `!true → false`         |    |       |   |               |
+
+---
+
+### 4️⃣ Assignment Operators
+
+Used to assign values to variables.
+
+| Operator | Example  | Meaning     |
+| -------- | -------- | ----------- |
+| `=`      | `a = 5`  | Assign      |
+| `+=`     | `a += 3` | `a = a + 3` |
+| `-=`     | `a -= 2` | `a = a - 2` |
+| `*=`     | `a *= 4` | `a = a * 4` |
+| `/=`     | `a /= 2` | `a = a / 2` |
+| `%=`     | `a %= 3` | `a = a % 3` |
+
+---
+
+### 5️⃣ Unary Operators
+
+Operate on one value.
+
+| Operator | Meaning           | Example |
+| -------- | ----------------- | ------- |
+| `++`     | Increment         | `a++`   |
+| `--`     | Decrement         | `a--`   |
+| `+`      | Convert to number | `+a`    |
+| `-`      | Negate value      | `-a`    |
+
+---
+
+### 6️⃣ Ternary Operator
+
+Short version of `if-else`.
+
+```js
+let age = 18;
+let result = age >= 18 ? "Adult" : "Child";
+```
+
+| Part      | Meaning     |
+| --------- | ----------- |
+| Condition | `age >= 18` |
+| `?`       | If true     |
+| `:`       | If false    |
+
+---
+
+# 🧠 Examples (Practice)
+
+### ✔️ Example 1 – AND (`&&`)
+
+```js
+let x = 10, y = 20;
+console.log(x > 5 && y > 5); // true
+```
+
+### ✔️ Example 2 – OR (`||`)
+
+```js
+let isAdmin = true, isLoggedIn = false;
+console.log(isAdmin || isLoggedIn); // true
+```
+
+### ✔️ Example 3 – Ternary
+
+```js
+let score = 78;
+let grade = score >= 70 ? "C" : "D";
+console.log(grade); // C
+```
+
+---
+
+## 🧪  JavaScript Exercises – Operator
+
+
+# 📘 JavaScript Operators – Examples with Output & Why
+
+---
+
+## ✅ Example 1 – AND (`&&`)
+
+```js
+let x = 10;
+let y = 20;
+
+if(x > 5 && y > 5){
+  console.log("Both are greater than 5");
+}else{
+  console.log("One or both are not greater than 5");
+}
+```
+
+**Output:**
+
+```
+Both are greater than 5
+```
+
+**Why:** Both conditions are `true`, so `&&` returns `true`.
+
+---
+
+## ✅ Example 2 – OR (`||`)
+
+```js
+let isAdmin = true;
+let isLoggedIn = false;
+
+if(isAdmin || isLoggedIn){
+  console.log("Access granted");
+}else{
+  console.log("Access Denied");
+}
+```
+
+**Output:**
+
+```
+Access granted
+```
+
+**Why:** `||` returns `true` if **any one** condition is true.
+
+---
+
+## ✅ Example 3 – NOT (`!`)
+
+```js
+let temp = 35;
+
+if(!(temp > 30)){
+  console.log("Hot day");
+}else{
+  console.log("Pleasant day");
+}
+```
+
+**Output:**
+
+```
+Pleasant day
+```
+
+**Why:** `temp > 30` is `true`, but `!true` becomes `false`.
+
+---
+
+## ✅ Example 4 – Truthy / Falsy
+
+```js
+let a = 0;
+
+if(a){
+  console.log("Truthy value");
+}else{
+  console.log("Falsy value");
+}
+```
+
+**Output:**
+
+```
+Falsy value
+```
+
+**Why:** `0` is a **falsy** value in JavaScript.
+
+---
+
+## ✅ Example 5 – Nested Ternary
+
+```js
+let score = 78;
+let grade = score >= 90 ? "A" : score >= 80 ? "B" : score >= 70 ? "C" : "D";
+console.log("Grade:", grade);
+```
+
+**Output:**
+
+```
+Grade: C
+```
+
+**Why:** `78 >= 70` is true, so grade is `C`.
+
+---
+
+## ✅ Example 6 – Ternary (Multiple Conditions)
+
+```js
+let points = 120;
+let status = points >= 100 ? "Gold" : points >= 50 ? "Silver" : "Bronze";
+console.log("Status:", status);
+```
+
+**Output:**
+
+```
+Status: Gold
+```
+
+**Why:** First condition matches (`>= 100`).
+
+---
+
+## ✅ Example 7 – AND with Ternary
+
+```js
+let loggedIn = true;
+let hasToken = false;
+let access = loggedIn && hasToken ? "Allow" : "Deny";
+console.log("access:", access);
+```
+
+**Output:**
+
+```
+access: Deny
+```
+
+**Why:** Both must be true for `&&`, but `hasToken` is false.
+
+---
+
+## ✅ Example 8 – Post Increment (`a++`)
+
+```js
+let a = 5;
+a++;
+console.log(a);
+```
+
+**Output:**
+
+```
+6
+```
+
+**Why:** `a++` increases value **after** use.
+
+---
+
+## ✅ Example 9 – Pre Increment (`++a`)
+
+```js
+let a = 8;
+++a;
+console.log(a);
+```
+
+**Output:**
+
+```
+9
+```
+
+**Why:** `++a` increases value **before** use.
+
+---
+
+## ✅ Example 10 – Post Increment Assignment
+
+```js
+let b = 4;
+let c = b++;
+console.log(b, c);
+```
+
+**Output:**
+
+```
+5 4
+```
+
+**Why:** `c` gets old value, then `b` increments.
+
+---
+
+## ✅ Example 11 – Pre Increment Assignment
+
+```js
+let b = 4;
+let c = ++b;
+console.log(b, c);
+```
+
+**Output:**
+
+```
+5 5
+```
+
+**Why:** `b` increments first, then assigned to `c`.
+
+---
+
+## ✅ Example 12 – Post Decrement
+
+```js
+let m = 10;
+console.log(m--);
+console.log(m);
+```
+
+**Output:**
+
+```
+10
+9
+```
+
+**Why:** First prints, then decrements.
+
+---
+
+## ✅ Example 13 – Mixed Increment
+
+```js
+let n = 5;
+let result = n++ + ++n;
+console.log(result);
+```
+
+**Output:**
+
+```
+12
+```
+
+**Why:** `5 + 7 = 12` (post then pre increment).
+
+---
+
+## ❌ Example 14 – Syntax Error
+
+```js
+let likes = 100;
+
+function likePost(){
+  result ++likes; // ❌ INVALID
+}
+```
+
+**Error:**
+
+```
+SyntaxError
+```
+
+**Why:** Invalid operator usage. Should be `likes++`.
+
+---
+
+## ✅ Example 15 – Post Decrement in Condition
+
+```js
+let count = 5;
+if(count-- === 5){
+  console.log("Matched");
+}else{
+  console.log("Not Matched");
+}
+```
+
+**Output:**
+
+```
+Matched
+```
+
+**Why:** Comparison happens first, then decrement.
+
+---
