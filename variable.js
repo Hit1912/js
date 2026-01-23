@@ -100,27 +100,3 @@ const --> hoist --> error
 */  
 
 
-// Example 1
-// console.log(nm);
-// let nm = "name";
-
-// Example 2
-console.log(b);
-var b = "username";
-
-// Example 3
-var x = 1;
-{
-    var x = 2;
-}
-
-// Example 4
-console.log(x);
-
-let a = 10;
-{
-    let a = 20;
-    console.log("Inside:", a);
-}
-console.log("Outside:", a);
-
