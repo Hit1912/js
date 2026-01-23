@@ -132,7 +132,7 @@ Used as a short form of `if-else`.
 
 
 ## Excercise
-Example 1 
+# Example 1 
 
 let x = 10;
 let y = 20;
@@ -146,7 +146,7 @@ if (x > 5 && y > 5) {
  Output:-
  ✔️  Both are greater than 5
 
-Example 2
+# Example 2
 
 let isAdmin = true;
 let isLoggedIn = false;
@@ -160,7 +160,7 @@ if (isAdmin || isLoggedIn) {
  Output:-
   ✔️ Access granted
 
-Example 3
+# Example 3
 
 let temp = 35;
 
@@ -174,7 +174,7 @@ Output:-
 ❌ Pleasant day
 
 
-Example 4
+# Example 4
 
 if (temp > 30) {
   console.log("Hot day");
@@ -183,7 +183,7 @@ if (temp > 30) {
 Output:-
 
 
-Example 5
+# Example 5
 
 let score = 78;
 
@@ -197,7 +197,7 @@ console.log("Grade:", grade);
 Output:-
 ✔️ Grade: C
 
-Example 6
+# Example 6
 
 let points = 120;
 
@@ -209,7 +209,7 @@ console.log("Status:", status);
 Output:-
 ✔️ Status: Gold
 
-Example 7
+# Example 7
 
 let loggedIn = true;
 let hasToken = false;
@@ -221,7 +221,7 @@ Output:-
 ✔️ access: Deny
 
 
-Example 8
+# Example 8
 
 let a = 5;
 a++;
@@ -231,7 +231,7 @@ Output:-
 ✔️ 6
 
 
-Example 9
+# Example 9
 
 let a = 8;
 ++a;
@@ -240,7 +240,7 @@ console.log(a);
 Output:-
 ✔️ 9
 
-Example 10
+# Example 10
 
 let b = 4;
 let c = b++;
@@ -250,7 +250,7 @@ Output:-
 ✔️ 5 4
 
 
-Example 11
+# Example 11
 
 let b = 4;
 let c = ++b;
@@ -260,7 +260,7 @@ Output:-
 ✔️ 5 5
 
 
-Example 12
+# Example 12
 
 let m = 10;
 console.log(m--);
@@ -270,7 +270,7 @@ Output:-
 ✔️ 10
     9
 
-Example 13
+# Example 13
 
 let n = 5;
 let result = n++ + ++n;
@@ -280,7 +280,7 @@ Output:-
 ✔️ 12
 
 
-Example 14
+# Example 14
 
 let likes = 100;
 
@@ -295,7 +295,7 @@ console.log(likes);
 Output:-
 ❌ Uncaught SyntaxError
 
-Example 15
+# Example 15
 
 let count = 5;
 
