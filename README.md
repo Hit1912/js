@@ -295,7 +295,7 @@ console.log(likes);
 Output:-
 ❌ Uncaught SyntaxError
 
-# Example 15
+### Example 15
 
 let count = 5;
 
