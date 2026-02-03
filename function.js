@@ -384,3 +384,7 @@ function temp_fnc(){
 // | -------------------------- | -------------------- | ------------------- |
 // | Hoisting                   | ✅ Yes                | ❌ No                |
 // | Can call before definition | ✅ Yes                | ❌ No                |
+
+
+// ## Example 2: Predict Output
+

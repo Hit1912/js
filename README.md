@@ -889,8 +889,9 @@ A recursive function is a function that calls itself to solve a problem.
 
 ---
 
-## Function Examples
-### Example 1
+# Function Examples
+## Example 1
+
 ### ❓ Difference between Function Declaration & Function Expression (Hoisting)
 
 | Feature                    | Function Declaration | Function Expression |
@@ -902,3 +903,346 @@ A recursive function is a function that calls itself to solve a problem.
 
 - Function declarations are fully hoisted (name + body).
 - Function expressions are stored in variables, so they behave like variables.
+
+## Example 2
+
+### Predict Output
+```js
+greet();
+function greet(){
+    console.log("Hello!");
+}
+```
+- Answer: ✅ Works
+- Output: "Hello!"
+
+### 💡 Why?
+- Because greet is a function declaration, it is hoisted entirely, so it exists before the call. 
+
+## Example 3
+```js
+function add(a, b){
+    return a + b;
+}
+```
+### How:
+
+- Remove function keyword.
+- Use =>.
+- For single return, can omit {} and return.
+
+## Example 4
+
+## Parameters vs Arguments
+
+```js
+function welcome(name){
+    console.log("Welcome " + name);
+}
+welcome("user");
+```
+
+### Answer:
+
+- Parameter: name (placeholder in function definition)
+- Argument: "user" (actual value passed when calling)
+
+## Example 5
+
+## How many parameters and args
+```js
+function temp(a, b, c){
+    console.log(a, b, c);
+}
+temp(1, 2);
+```
+
+## Answer:
+
+- Parameters: a, b, c → 3
+- Arguments: 1, 2 → 2
+
+## Example 6
+
+## Default Parameters
+```js
+function temp_user(name = "Guest"){
+    console.log("Hello " + name);
+}
+temp_user();
+```
+
+## Answer: ✅ Works
+## Output:
+- "Hello Guest"
+
+## 💡 Why?
+- name defaults to "Guest" if no argument is passed.
+
+## Example 7
+
+## Spread/Rest Operator ...
+```js
+function number(...numbers){
+    console.log(numbers);
+}
+number(1, 2, 3, 4, 5);
+
+```
+## Output:
+- [1, 2, 3, 4, 5]
+
+## 💡 Why?
+- ...numbers collects all arguments into an array.
+- Useful when you don’t know how many arguments will be passed.
+
+
+## Example 8
+## Using Rest Parameters to Sum Numbers
+```js
+function calculateTotal(...scores){
+    let total = 0;
+    for(let i=0; i<=scores.length; i++){
+        total += scores[i];
+    }
+    return total;
+}
+```
+## Problem: ❌ Bug
+
+## Example 9
+
+## Early Return
+```js
+function checkAge(age){
+    if(age < 18){
+        console.log("Too Young");
+    } else {
+        console.log("Access Granted");
+    }
+}
+```
+## 💡 Why? :-
+
+- Avoids unnecessary else block.
+- Function exits immediately after condition.
+
+## Example 10
+
+## Return Value
+```js
+function f(){ return; }
+```
+## Answer
+- undefined
+
+## 💡 Why? :-
+- If return has no value, the function returns undefined by default.
+
+## Example 11
+## Functions are first-class citizens
+```js
+const greet = function(name){ return "Hello " + name; }; // assigned to variable
+console.log(greet("User")); 
+```
+
+## 💡 Why? :-
+- Functions are treated like any other value in JS. This enables functional programming patterns.
+
+## Example 12 
+## Assign a function to a variable and call it
+```js
+let a = function(){console.log("Hello");}
+a();
+```
+
+## Answer: ✅ Works
+## Output :- 
+- "Hello"
+
+## 💡 Why? :-
+- The function expression is stored in a.
+- Calling a() executes the function.
+
+## Example 13 
+## Pass a function into another function
+```js
+function abcd(val){ val(); }
+abcd(function(){ console.log("Hello"); });
+```
+
+## Answer: ✅ Works
+## Output:-
+- "Hello"
+
+## 💡 Why? :-
+- The function is passed as an argument.
+- Inside abcd, val() executes the passed function.
+- This is a classic example of callback functions.
+
+## Example 14
+## Higher-order function
+```js
+function greet(fn){ fn(); } // takes a function as argument
+greet(() => console.log("Hello"));
+```
+
+## Answer:-
+
+- A higher-order function (HOF) is a function that either:
+- Takes one or more functions as arguments
+- Returns a function
+
+## 💡 Why? :-
+- HOFs allow abstraction and functional patterns in JS.
+
+## Example 16 
+## Pure or Impure function?
+```js
+let total = 5;
+function num(num){
+    total += num;
+}
+num(3);
+```
+
+## Answer: 
+- ❌ Impure function
+
+## 💡 Why? :-
+
+- A pure function should not have side effects.
+- This function modifies the external variable total, which is a side effect.
+
+## Example 17
+## Convert to Pure Function
+
+```js
+function num(total, value){
+    return total + value;
+}
+let total = 5;
+total = num(total, 3); // 8
+```
+## 💡 Why? :-
+- No external state is modified.
+- Output depends only on input arguments, which makes it pure.
+
+## Example 18
+ ## Closure
+ ```js
+function outer(){
+    let count = 0;
+    return function(){
+        count++;
+        console.log(count);
+    };
+}
+const counter = outer(); // closure is created here
+counter(); // 1
+counter(); // 2
+```
+
+## Answer:
+
+- A closure is a function that “remembers” variables from its lexical scope, even after the outer function has finished executing.
+- When created:
+- When a function is defined inside another function and accesses the outer function’s variables.
+
+## Example 19
+## Predict Output
+```js
+function outer(){
+    let count = 0;
+    return function(){
+        count++;
+        console.log(count);
+    };
+}
+const counter = outer();
+counter();
+counter();
+
+```
+
+## Answer: ✅ Works
+## Output:
+- 1
+- 2
+
+
+## 💡 Why? :-
+
+- The inner function has access to count due to closure.
+- count is preserved across multiple calls of counter.
+
+## Example 20
+## Convert to IIFE
+## Convert
+```js
+
+function init(){
+    console.log("Initialized");
+}
+
+```
+
+## IIFE
+```js
+(function init(){
+    console.log("Initialized");
+})();
+
+```
+
+## 💡 Why? :-
+- IIFE (Immediately Invoked Function Expression) runs immediately without being called separately.
+
+## Example 21 
+## Use of IIFE
+```js
+let fun = (function(){
+    let score = 0; // private variable
+    return {
+        getScore: function(){ console.log(score); },
+        setScore: function(val){ score = val; }
+    }
+})();
+```
+## Answer:
+
+### Use: Encapsulation / data privacy
+
+- score is private and only accessible through getScore / setScore
+- Real-world use case:
+- Maintaining module state without polluting global scope
+
+## Example 22 
+## Function expression hoisting
+```js
+temp_var();
+var temp_var = function(){
+    console.log("Hello");
+}
+```
+
+## Answer: ❌ Error: temp_var is not a function
+
+## 💡 Why? :-
+- var temp_var is hoisted as undefined
+- Trying to call undefined() results in an error
+
+## Example 23
+## Function declaration hoisting
+```js
+temp_var();
+function temp_var(){
+    console.log("Hello");
+}
+```
+## Answer: ✅ Works
+## Output:- 
+- "Hello"
+
+## 💡 Why? :-
+- Function declarations are hoisted with their body, so they can be called before definition
