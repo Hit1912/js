@@ -739,3 +739,166 @@ let score = 78;
 let grade = score >= 70 ? "C" : "D";
 console.log(grade); // C
 ```
+
+# 📘 JavaScript Functions – Complete Guide
+
+This repository contains **JavaScript function concepts** explained with clear examples.
+It covers **basic to advanced topics** commonly asked in interviews and used in real projects.
+
+---
+
+## 📌 What is a Function?
+
+A **function** is a block of code that performs a specific task.
+
+### Why use functions?
+- Avoid code repetition
+- Improve readability
+- Make code modular & reusable
+
+### Function Structure
+- `function` keyword
+- Function name
+- Parameters
+- Function body
+- Return statement
+
+---
+
+## 🧩 Types of Functions
+
+JavaScript supports multiple types of functions. Each type differs in behavior, syntax, and usage. Understanding these differences is important for writing clean, efficient, and maintainable code.
+
+---
+
+### 1️⃣ Function Declaration
+
+A function declaration defines a named function using the `function` keyword.  
+It is fully hoisted, meaning it can be used before it is defined in the code.
+
+**Key Points:**
+- Fully hoisted (name + body)
+- Can be called before declaration
+- Commonly used for core application logic
+
+---
+
+### 2️⃣ Function Expression
+
+A function expression stores a function inside a variable.  
+The function is created only when the execution reaches that line.
+
+**Key Points:**
+- Not hoisted
+- Cannot be used before definition
+- Useful when functions need to be assigned, passed, or conditionally created
+
+---
+
+### 3️⃣ Arrow Function (Fat Arrow Function)
+
+Arrow functions provide a shorter syntax for writing functions.  
+They do not have their own `this`, `arguments`, or `prototype`.
+
+**Key Points:**
+- Not hoisted
+- Short and concise syntax
+- Inherits `this` from surrounding scope
+- Not suitable for object methods or constructors
+
+---
+
+### 4️⃣ Anonymous Function
+
+An anonymous function is a function without a name.  
+It is commonly used where the function is needed only once.
+
+**Key Points:**
+- No function name
+- Used mainly as callbacks
+- Cannot be reused directly
+
+---
+
+### 5️⃣ Named Function Expression
+
+A named function expression is a function expression with a name.  
+The name is accessible only inside the function itself.
+
+**Key Points:**
+- Helps with debugging
+- Function name is not available in the outer scope
+- Not hoisted
+
+---
+
+### 6️⃣ Immediately Invoked Function Expression (IIFE)
+
+An IIFE is a function that executes immediately after it is defined.  
+It is mainly used to create a private scope.
+
+**Key Points:**
+- Executes immediately
+- Prevents global variable pollution
+- Often used for initialization logic
+
+---
+
+### 7️⃣ First Class Function
+
+JavaScript treats functions as first-class citizens.  
+This means functions can be handled like any other variable.
+
+**Key Points:**
+- Can be assigned to variables
+- Can be passed as arguments
+- Can be returned from other functions
+
+---
+
+### 8️⃣ Higher Order Function (HOF)
+
+A higher-order function is a function that works with other functions.
+
+**Key Points:**
+- Accepts one or more functions as parameters OR
+- Returns a function as a result
+- Forms the foundation of functional programming
+
+---
+
+### 9️⃣ Callback Function
+
+A callback function is a function passed to another function and executed later.
+
+**Key Points:**
+- Enables asynchronous programming
+- Commonly used in events, timers, and APIs
+- Improves modularity and flexibility
+
+---
+
+### 🔟 Recursive Function
+
+A recursive function is a function that calls itself to solve a problem.
+
+**Key Points:**
+- Must have a base condition
+- Useful for repetitive and hierarchical problems
+- Improves readability for certain algorithms
+
+---
+
+## Function Examples
+### Example 1
+### ❓ Difference between Function Declaration & Function Expression (Hoisting)
+
+| Feature                    | Function Declaration | Function Expression |
+| -------------------------- | -------------------- | ------------------- |
+| Hoisting                   | ✅ Yes                | ❌ No             |
+| Can call before definition | ✅ Yes                | ❌ No             |
+
+### 💡 Why?
+
+Function declarations are fully hoisted (name + body).
+Function expressions are stored in variables, so they behave like variables.

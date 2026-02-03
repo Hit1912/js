@@ -7,6 +7,7 @@
 // print 1 to 10 --> console.log(1); console.log(2); ... console.log(10);
 // kaya thi javanu chhe --> kaya sudhi javanu chhe --> kevi rite javanu chhe
 // for (ex. 1 -> 50 -> increment by 1)
+
 for (let i = 1; i <= 10; i++) {
   console.log(i);
 }  
@@ -61,7 +62,6 @@ while (f >= 20) {
   f--;
 }
 
-
 // 3.
 let c = 30;
 while (c >= 20) {
@@ -83,14 +83,12 @@ while (g >= 20) {
     g--;
 }
 
-
 // 6.
 let i = 20;
 while (i <= 30) {
     console.log("Make It True Loop I :", i);
     i++;
 }
-
 
 // 7.
 let j = 1;
@@ -112,3 +110,26 @@ while (l >= 20) {
     console.log("Make It True Loop L :", l);
     l--;
 }   
+
+//Do While Loop
+// do{} while(end);
+//Start
+//do {
+// Code
+//Change}
+//} while(end);
+
+let p = 12; //Start
+do {
+  console.log("Do While Loop P :", p);
+  p++;
+} while (p <= 10);  //While Check After Executing Code Block (End)
+
+//Break and Continue Statement in Loops
+for (let q = 1; q <= 10; q++) {
+  console.log("Loop With Break :", q);
+  if (q == 5) {
+    break; // exit the loop when q is 5
+  } 
+}
+
