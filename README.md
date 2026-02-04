@@ -1558,3 +1558,281 @@ console.log(scores);
 | `sort()` | Sort array | ✅ Yes | Rank, price sorting |
 
 ---
+
+# Array Of JavaScript Example 
+
+## ✅ Q1. push()
+```js
+let tasks = ['Wake up', 'Brush teeth'];
+tasks.push('Buy milk');
+```
+
+### output: ['Wake up', 'Brush teeth', 'Buy milk']
+
+### Why :- 
+- push() adds an element at the end of the array and changes the original array.
+
+## ✅ Q2. pop()
+```js
+let notifications = ['Email', 'Message', 'Reminder'];
+notifications.pop();
+```
+###  output: ['Email', 'Message']
+
+### Why :-
+- pop() removes the last element and mutates the array.
+
+## ✅ Q3. shift()
+```js
+let customers = ['Customer1', 'Customer2', 'Customer3'];
+customers.shift();
+```
+
+###  output: ['Customer2', 'Customer3']
+
+### Why :--
+- shift() removes the first element from the array and modifies the original array.
+
+## ✅ Q4. unshift()
+```js
+let playlist = ['Song B', 'Song C'];
+playlist.unshift('Song A');
+```
+
+### output: ['Song A', 'Song B', 'Song C']
+### Why :-
+- unshift() adds an element at the beginning of the array and changes the original array.
+
+## ✅ Q5. splice()
+```js
+let students = ['Mike', 'Alex', 'Emma', 'Sophia'];
+students.splice(1, 1, 'John', 'Sara');
+```
+### output: ['Mike', 'John', 'Sara', 'Emma', 'Sophia']
+
+### Why :-
+- splice(index, deleteCount, items...)
+- Removes 'Alex'
+- Inserts 'John' & 'Sara' at the same position
+
+## ✅ Q6. splice()
+```js
+let menu = ['Burger', 'Pizza', 'Pasta', 'Salad'];
+menu.splice(1, 2);
+console.log(menu);
+```
+### output: ['Burger', 'Salad']
+
+### Why :-
+- We want to modify the original menu by removing 2 items from index 1.
+- Only splice() can remove multiple items from a specific position.
+
+## ✅ Q7. slice()
+```js
+let days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+let weekend = days.slice(5);
+console.log(weekend);
+```
+### output: ['Saturday', 'Sunday']
+### Why :-
+- slice() creates a new array without changing the original.
+- Weekend days are just a filtered view, not a modification.
+
+## ✅ Q8. reverse()
+```js
+let levels = ['Easy', 'Medium', 'Hard'];
+levels.reverse();
+console.log(levels);
+```
+### output: ['Hard', 'Medium', 'Easy']
+### Why :-
+- reverse() changes the order in-place.
+- Game levels are flipped to show hardest first.
+
+## ✅ Q9. sort()
+```js
+let scores = [45, 12, 78, 34, 89];
+scores.sort((a, b) => a - b);
+console.log(scores);
+```
+
+### output:  [12, 34, 45, 78, 89]
+### Why :-
+- Default sort() treats numbers as strings, which is wrong.
+- Using (a, b) => a - b ensures numeric ascending order.
+
+
+## Q10. sort() with numbers
+```js
+let prices = [199, 49, 999, 299, 149];
+prices.sort((a, b) => a - b);
+console.log(prices);
+```
+### output: [49, 149, 199, 299, 999]
+
+### Why :-
+- Prices must be compared numerically, not alphabetically.
+- Comparator function fixes this issue.
+
+## Q11. slice() vs splice()
+```js
+let products = ['Laptop', 'Phone', 'Tablet', 'Monitor', 'Keyboard'];
+let firstThree = products.slice(0, 3);
+console.log(firstThree);
+```
+### output: ['Laptop', 'Phone', 'Tablet']
+```js
+console.log(products);
+```
+### output: Original unchanged
+### Why :-
+- Requirement says “WITHOUT changing original array”.
+- slice() is immutable, splice() is mutable → so slice() is correct.
+
+## Q12. splice() complex
+```js
+let colors = ['Red', 'Green', 'Blue', 'Yellow'];
+colors.splice(2, 1, 'Purple', 'Orange');
+console.log(colors);
+```
+### output: ['Red', 'Green', 'Purple', 'Orange', 'Yellow']
+### Why :-
+- We need to:
+- Remove "Blue"
+- Add new colors at same position
+- Only splice() supports remove + insert together.
+
+## Q13. reverse() + push()
+```js
+let steps = ['Step 1', 'Step 2', 'Step 3'];
+steps.reverse();
+steps.push('Final Step');
+console.log(steps);
+```
+### output:  ['Step 3', 'Step 2', 'Step 1', 'Final Step']
+### Why :-
+- reverse() flips order
+- push() adds at end
+- This combination is useful for workflow steps.
+
+
+## Q14. sort() strings (ignore case)
+```js
+let names = ['alice', 'Bob', 'charlie', 'David'];
+names.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+console.log(names);
+```
+### output:  ['alice', 'Bob', 'charlie', 'David']
+### Why :-
+- Default string sorting is case-sensitive ("Z" < "a").
+- Using toLowerCase() ensures fair alphabetical order.
+
+## Q15. Combination Question
+```js
+let movies = ['Avatar', 'Titanic', 'Gladiator'];
+movies.push('Inception');
+movies.shift();
+movies.sort();
+console.log(movies);
+```
+### output:  ['Gladiator', 'Inception', 'Titanic']
+### Why :
+- push() → add new movie
+- shift() → remove first movie
+- sort() → alphabetically arrange
+- This mimics real watchlist management.
+
+## Q16. splice() return value
+```js
+let nums1 = [1, 2, 3, 4];
+let removedItems = nums1.splice(1, 2);
+console.log(removedItems);
+```
+### output:  [2, 3]
+```js
+console.log(nums1);
+```
+### output:  [1, 4]
+### Why :-
+- splice() returns an array of removed elements,
+- useful for:
+- undo
+- logs
+- backups 
+
+## Q17. slice() immutability check
+```js
+let nums2 = [10, 20, 30, 40];
+let result = nums2.slice(1, 3);
+console.log(result);
+```
+### output:  [20, 30]
+```js
+console.log(nums2);
+```
+### output:  Original array unchanged
+### Why :-
+- slice() does not touch the original array.
+- This is important for:
+- React state
+- safe data handling
+
+## Q19. reverse() mutation
+```js
+let letters = ['a', 'b', 'c'];
+let reversedLetters = letters.reverse();
+console.log(reversedLetters);
+```
+### output:  ['c', 'b', 'a']
+```js
+console.log(letters);
+```
+### output:  Same array (reverse mutates original)
+### Why :-
+- reverse() modifies the same array reference.
+- Both variables point to the same array in memory.
+
+## Q21. splice() edge case (deleteCount = 0)
+```js
+let arr = ['x', 'y', 'z'];
+arr.splice(1, 0, 'new');
+console.log(arr);
+```
+### output:  ['x', 'new', 'y', 'z']
+### Why :-
+- deleteCount = 0 means remove nothing.
+- So splice() only inserts new elements.
+
+## Q23. slice() negative index
+```js
+let values = [100, 200, 300, 400, 500];
+let sliced = values.slice(-3, -1);
+console.log(sliced);
+```
+### output:  [300, 400]
+### Why :-
+- Negative index starts counting from the end:
+- -1 → last element
+- -3 → third from last
+
+## Q24. splice() vs slice() decision
+- a) Update original array → splice()
+- b) Keep original unchanged → slice()
+### Why :-
+- Need to update original → splice()
+- Need copy only → slice()
+
+## Q25. Chained methods (brain teaser)
+```js
+let arr2 = [1, 2, 3];
+arr2.push(arr2.shift());
+console.log(arr2);
+```
+### output:  [2, 3, 1]
+### Why :-
+- arr2.push(arr2.shift());
+- shift() removes 1
+- push(1) adds it at the end
+- This rotates the array left by one position.
+
+---

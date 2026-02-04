@@ -100,7 +100,7 @@ a.push(700);
 
 
 //7. reverse() -- reverse the array
-let g = [10, 20, 30, 40, 50];   
+//let g = [10, 20, 30, 40, 50];   
 //g.reverse();
 // Use Case :-
 // let names = ["Alice", "Bob", "Charlie"];
@@ -109,8 +109,8 @@ let g = [10, 20, 30, 40, 50];
 // // ["Charlie", "Bob", "Alice"]
 
 //8. sort() -- sort the array
-let h = [50, 20, 40, 10, 30];
-h.sort();
+//let h = [50, 20, 40, 10, 30];
+//h.sort();
 //let h = [10,20,30,40,50];
 // Use Case :-
 // let scores = [85, 42, 96, 73, 58];
@@ -118,4 +118,54 @@ h.sort();
 // console.log(scores);
 // // [42, 58, 73, 85, 96]
 
+// Examples
+// ✅ Q1. push()
+
+let tasks = ['Wake up', 'Brush teeth'];
+tasks.push('Buy milk');
+
+// output: ['Wake up', 'Brush teeth', 'Buy milk']
+
+// Why :- 
+// push() adds an element at the end of the array and changes the original array.
+
+// ✅ Q2. pop()
+
+let notifications = ['Email', 'Message', 'Reminder'];
+notifications.pop();
+
+// output: ['Email', 'Message']
+
+// Why :-
+//pop() removes the last element and mutates the array.
+
+// ✅ Q3. shift()
+
+let customers = ['Customer1', 'Customer2', 'Customer3'];
+customers.shift();
+
+// output: ['Customer2', 'Customer3']
+
+// Why :--
+// shift() removes the first element from the array and modifies the original array.
+
+// ✅ Q4. unshift()
+
+let playlist = ['Song B', 'Song C'];
+playlist.unshift('Song A');
+
+// output: ['Song A', 'Song B', 'Song C']
+
+// Why :-
+// unshift() adds an element at the beginning of the array and changes the original array.
+
+// ✅ Q5. splice()
+
+let students = ['Mike', 'Alex', 'Emma', 'Sophia'];
+students.splice(1, 1, 'John', 'Sara');
+
+// output: ['Mike', 'John', 'Sara', 'Emma', 'Sophia']
+
+// Why :-
+// splice() can add/remove elements at a specific index and modifies the original array.
 
