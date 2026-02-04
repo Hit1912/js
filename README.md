@@ -1662,7 +1662,7 @@ console.log(scores);
 - Using (a, b) => a - b ensures numeric ascending order.
 
 
-## Q10. sort() with numbers
+## ✅ Q10. sort() with numbers
 ```js
 let prices = [199, 49, 999, 299, 149];
 prices.sort((a, b) => a - b);
@@ -1674,7 +1674,7 @@ console.log(prices);
 - Prices must be compared numerically, not alphabetically.
 - Comparator function fixes this issue.
 
-## Q11. slice() vs splice()
+## ✅ Q11. slice() vs splice()
 ```js
 let products = ['Laptop', 'Phone', 'Tablet', 'Monitor', 'Keyboard'];
 let firstThree = products.slice(0, 3);
@@ -1689,7 +1689,7 @@ console.log(products);
 - Requirement says “WITHOUT changing original array”.
 - slice() is immutable, splice() is mutable → so slice() is correct.
 
-## Q12. splice() complex
+## ✅ Q12. splice() complex
 ```js
 let colors = ['Red', 'Green', 'Blue', 'Yellow'];
 colors.splice(2, 1, 'Purple', 'Orange');
@@ -1702,7 +1702,7 @@ console.log(colors);
 - Add new colors at same position
 - Only splice() supports remove + insert together.
 
-## Q13. reverse() + push()
+## ✅ Q13. reverse() + push()
 ```js
 let steps = ['Step 1', 'Step 2', 'Step 3'];
 steps.reverse();
@@ -1716,7 +1716,7 @@ console.log(steps);
 - This combination is useful for workflow steps.
 
 
-## Q14. sort() strings (ignore case)
+## ✅ Q14. sort() strings (ignore case)
 ```js
 let names = ['alice', 'Bob', 'charlie', 'David'];
 names.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
@@ -1727,7 +1727,7 @@ console.log(names);
 - Default string sorting is case-sensitive ("Z" < "a").
 - Using toLowerCase() ensures fair alphabetical order.
 
-## Q15. Combination Question
+## ✅ Q15. Combination Question
 ```js
 let movies = ['Avatar', 'Titanic', 'Gladiator'];
 movies.push('Inception');
@@ -1742,7 +1742,7 @@ console.log(movies);
 - sort() → alphabetically arrange
 - This mimics real watchlist management.
 
-## Q16. splice() return value
+## ✅ Q16. splice() return value
 ```js
 let nums1 = [1, 2, 3, 4];
 let removedItems = nums1.splice(1, 2);
@@ -1760,7 +1760,7 @@ console.log(nums1);
 - logs
 - backups 
 
-## Q17. slice() immutability check
+## ✅ Q17. slice() immutability check
 ```js
 let nums2 = [10, 20, 30, 40];
 let result = nums2.slice(1, 3);
@@ -1777,7 +1777,7 @@ console.log(nums2);
 - React state
 - safe data handling
 
-## Q19. reverse() mutation
+## ✅ Q19. reverse() mutation
 ```js
 let letters = ['a', 'b', 'c'];
 let reversedLetters = letters.reverse();
@@ -1792,7 +1792,7 @@ console.log(letters);
 - reverse() modifies the same array reference.
 - Both variables point to the same array in memory.
 
-## Q21. splice() edge case (deleteCount = 0)
+## ✅ Q21. splice() edge case (deleteCount = 0)
 ```js
 let arr = ['x', 'y', 'z'];
 arr.splice(1, 0, 'new');
@@ -1803,7 +1803,7 @@ console.log(arr);
 - deleteCount = 0 means remove nothing.
 - So splice() only inserts new elements.
 
-## Q23. slice() negative index
+## ✅ Q23. slice() negative index
 ```js
 let values = [100, 200, 300, 400, 500];
 let sliced = values.slice(-3, -1);
@@ -1815,14 +1815,14 @@ console.log(sliced);
 - -1 → last element
 - -3 → third from last
 
-## Q24. splice() vs slice() decision
+## ✅ Q24. splice() vs slice() decision
 - a) Update original array → splice()
 - b) Keep original unchanged → slice()
 ### Why :-
 - Need to update original → splice()
 - Need copy only → slice()
 
-## Q25. Chained methods (brain teaser)
+## ✅ Q25. Chained methods (brain teaser)
 ```js
 let arr2 = [1, 2, 3];
 arr2.push(arr2.shift());
