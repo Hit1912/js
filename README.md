@@ -933,7 +933,7 @@ function add(a, b){
 
 ## Example 4
 
-## Parameters vs Arguments
+### Parameters vs Arguments
 
 ```js
 function welcome(name){
@@ -949,7 +949,7 @@ welcome("user");
 
 ## Example 5
 
-## How many parameters and args
+### How many parameters and args
 ```js
 function temp(a, b, c){
     console.log(a, b, c);
@@ -957,14 +957,14 @@ function temp(a, b, c){
 temp(1, 2);
 ```
 
-## Answer:
+### Answer:
 
 - Parameters: a, b, c → 3
 - Arguments: 1, 2 → 2
 
 ## Example 6
 
-## Default Parameters
+### Default Parameters
 ```js
 function temp_user(name = "Guest"){
     console.log("Hello " + name);
@@ -972,16 +972,16 @@ function temp_user(name = "Guest"){
 temp_user();
 ```
 
-## Answer: ✅ Works
-## Output:
+### Answer: ✅ Works
+### Output:
 - "Hello Guest"
 
-## 💡 Why?
+### 💡 Why?
 - name defaults to "Guest" if no argument is passed.
 
 ## Example 7
 
-## Spread/Rest Operator ...
+### Spread/Rest Operator ...
 ```js
 function number(...numbers){
     console.log(numbers);
@@ -989,16 +989,16 @@ function number(...numbers){
 number(1, 2, 3, 4, 5);
 
 ```
-## Output:
+### Output:
 - [1, 2, 3, 4, 5]
 
-## 💡 Why?
+### 💡 Why?
 - ...numbers collects all arguments into an array.
 - Useful when you don’t know how many arguments will be passed.
 
 
 ## Example 8
-## Using Rest Parameters to Sum Numbers
+### Using Rest Parameters to Sum Numbers
 ```js
 function calculateTotal(...scores){
     let total = 0;
@@ -1008,11 +1008,11 @@ function calculateTotal(...scores){
     return total;
 }
 ```
-## Problem: ❌ Bug
+### Problem: ❌ Bug
 
 ## Example 9
 
-## Early Return
+### Early Return
 ```js
 function checkAge(age){
     if(age < 18){
@@ -1022,82 +1022,82 @@ function checkAge(age){
     }
 }
 ```
-## 💡 Why? :-
+### 💡 Why? :-
 
 - Avoids unnecessary else block.
 - Function exits immediately after condition.
 
 ## Example 10
 
-## Return Value
+### Return Value
 ```js
 function f(){ return; }
 ```
-## Answer
+### Answer
 - undefined
 
-## 💡 Why? :-
+### 💡 Why? :-
 - If return has no value, the function returns undefined by default.
 
 ## Example 11
-## Functions are first-class citizens
+### Functions are first-class citizens
 ```js
 const greet = function(name){ return "Hello " + name; }; // assigned to variable
 console.log(greet("User")); 
 ```
 
-## 💡 Why? :-
+### 💡 Why? :-
 - Functions are treated like any other value in JS. This enables functional programming patterns.
 
 ## Example 12 
-## Assign a function to a variable and call it
+### Assign a function to a variable and call it
 ```js
 let a = function(){console.log("Hello");}
 a();
 ```
 
-## Answer: ✅ Works
-## Output :- 
+### Answer: ✅ Works
+### Output :- 
 - "Hello"
 
-## 💡 Why? :-
+### 💡 Why? :-
 - The function expression is stored in a.
 - Calling a() executes the function.
 
 ## Example 13 
-## Pass a function into another function
+### Pass a function into another function
 ```js
 function abcd(val){ val(); }
 abcd(function(){ console.log("Hello"); });
 ```
 
-## Answer: ✅ Works
-## Output:-
+### Answer: ✅ Works
+### Output:-
 - "Hello"
 
-## 💡 Why? :-
+### 💡 Why? :-
 - The function is passed as an argument.
 - Inside abcd, val() executes the passed function.
 - This is a classic example of callback functions.
 
 ## Example 14
-## Higher-order function
+### Higher-order function
 ```js
 function greet(fn){ fn(); } // takes a function as argument
 greet(() => console.log("Hello"));
 ```
 
-## Answer:-
+### Answer:-
 
 - A higher-order function (HOF) is a function that either:
 - Takes one or more functions as arguments
 - Returns a function
 
-## 💡 Why? :-
+### 💡 Why? :-
 - HOFs allow abstraction and functional patterns in JS.
 
 ## Example 16 
-## Pure or Impure function?
+### Pure or Impure function?
 ```js
 let total = 5;
 function num(num){
@@ -1106,16 +1106,16 @@ function num(num){
 num(3);
 ```
 
-## Answer: 
+### Answer: 
 - ❌ Impure function
 
-## 💡 Why? :-
+### 💡 Why? :-
 
 - A pure function should not have side effects.
 - This function modifies the external variable total, which is a side effect.
 
 ## Example 17
-## Convert to Pure Function
+### Convert to Pure Function
 
 ```js
 function num(total, value){
@@ -1124,12 +1124,12 @@ function num(total, value){
 let total = 5;
 total = num(total, 3); // 8
 ```
-## 💡 Why? :-
+### 💡 Why? :-
 - No external state is modified.
 - Output depends only on input arguments, which makes it pure.
 
 ## Example 18
- ## Closure
+ ### Closure
  ```js
 function outer(){
     let count = 0;
@@ -1143,14 +1143,14 @@ counter(); // 1
 counter(); // 2
 ```
 
-## Answer:
+### Answer:
 
 - A closure is a function that “remembers” variables from its lexical scope, even after the outer function has finished executing.
 - When created:
 - When a function is defined inside another function and accesses the outer function’s variables.
 
 ## Example 19
-## Predict Output
+### Predict Output
 ```js
 function outer(){
     let count = 0;
@@ -1165,20 +1165,20 @@ counter();
 
 ```
 
-## Answer: ✅ Works
-## Output:
+### Answer: ✅ Works
+### Output:
 - 1
 - 2
 
 
-## 💡 Why? :-
+### 💡 Why? :-
 
 - The inner function has access to count due to closure.
 - count is preserved across multiple calls of counter.
 
 ## Example 20
-## Convert to IIFE
-## Convert
+### Convert to IIFE
+### Convert
 ```js
 
 function init(){
@@ -1187,7 +1187,7 @@ function init(){
 
 ```
 
-## IIFE
+### IIFE
 ```js
 (function init(){
     console.log("Initialized");
@@ -1199,7 +1199,7 @@ function init(){
 - IIFE (Immediately Invoked Function Expression) runs immediately without being called separately.
 
 ## Example 21 
-## Use of IIFE
+### Use of IIFE
 ```js
 let fun = (function(){
     let score = 0; // private variable
@@ -1209,7 +1209,7 @@ let fun = (function(){
     }
 })();
 ```
-## Answer:
+### Answer:
 
 ### Use: Encapsulation / data privacy
 
@@ -1218,7 +1218,7 @@ let fun = (function(){
 - Maintaining module state without polluting global scope
 
 ## Example 22 
-## Function expression hoisting
+### Function expression hoisting
 ```js
 temp_var();
 var temp_var = function(){
@@ -1226,23 +1226,335 @@ var temp_var = function(){
 }
 ```
 
-## Answer: ❌ Error: temp_var is not a function
+### Answer: ❌ Error: temp_var is not a function
 
-## 💡 Why? :-
+### 💡 Why? :-
 - var temp_var is hoisted as undefined
 - Trying to call undefined() results in an error
 
 ## Example 23
-## Function declaration hoisting
+### Function declaration hoisting
 ```js
 temp_var();
 function temp_var(){
     console.log("Hello");
 }
 ```
-## Answer: ✅ Works
-## Output:- 
+### Answer: ✅ Works
+### Output:- 
 - "Hello"
 
-## 💡 Why? :-
+### 💡 Why? :-
 - Function declarations are hoisted with their body, so they can be called before definition
+
+# 📘 JavaScript Arrays
+
+> ✨ **Array = one variable, multiple values**
+>
+> Arrays are used to store **multiple values at the same time** in a single variable.
+
+---
+
+## 🔹 What is an Array?
+
+An **array** is a collection of values stored in **ordered form**.  
+Each value has an **index (position)** starting from `0`.
+
+## 🔹 Creating an Array
+### Syntax
+```js
+let variable_name = [values];
+```
+
+### 📌 Examples of Arrays
+```js
+["Mobile", "Laptop", "Tablet", 5000, 25, 588]
+["a", "b", "Hello"]
+[2, 4, 5, 6]
+```
+## 🔹 Accessing Array Values
+
+- Array index starts from 0.
+```js
+// index positions: 0  1  2  3
+let arr = [1, 2, 3, 4];
+arr[0]; // 1
+arr[1]; // 2
+```
+
+## 🔹 Modifying Array Values
+```js
+let arr = [1, 2, 3, 4];
+
+arr[0] = 10;
+arr[1] = 20;
+arr[2] = 30;
+arr[3] = 40;
+
+console.log(arr); // [10, 20, 30, 40]
+```
+
+# 🔹 Common Array Methods
+```js
+push(), pop(), shift(), unshift(), splice(), slice(), reverse(), sort()
+```
+
+### 📌 Note:
+- When we use a function after a variable with dot (.), it is called a method.
+- Example: array.push()
+
+# 1️⃣ push() 
+- Add value at the end
+```js
+let a = [1, 2, 3, 4, 5];
+a.push(700);
+
+console.log(a);
+```
+##  Output: [1, 2, 3, 4, 5, 700]
+### ✅ Use Cases
+
+- 🛒 **Add product to cart**  
+  (New product is added at the end of the cart list)
+
+- 📝 **Add new task to task list**  
+  (Tasks are added in order)
+
+- 📦 **Store user input data**  
+  (Save form values step-by-step)
+
+- ⏱️ **Implement Stack (LIFO)**  
+  (Push new element on top of stack)
+---
+
+# 2️⃣ pop() 
+- Remove value from the end
+
+```js
+let b = [10, 20, 30, 40, 50];
+b.pop();
+
+console.log(b);
+
+```
+##  Output: [10, 20, 30, 40]
+
+### ✅ Use Cases
+
+- 🗑️ **Remove last added item**  
+  (Undo last action)
+
+- ↩️ **Undo feature**  
+  (Remove last change in editor)
+
+- 🧹 **Remove last product from cart**  
+  (Cancel recently added item)
+
+- ⏱️ **Stack operations (LIFO)**  
+  (Pop top element from stack)
+
+---
+# 3️⃣ shift() 
+- Remove value from the beginning
+
+```js
+let c = [10, 20, 30, 40, 50];
+
+console.log("Before shift:", c);
+
+let removed = c.shift();
+
+console.log("Removed value:", removed);
+console.log("After shift:", c);
+```
+## Output :
+- Before shift: [10, 20, 30, 40, 50]
+- Removed value: 10
+- After shift: [20, 30, 40, 50]
+
+### ✅ Use Cases
+
+- 🛒 **Remove first product from cart**  
+  (When the first added item is removed)
+
+- 📩 **Process queue data**  
+  (Remove the first message/task after it is processed)
+
+- 🎟️ **Ticket system**  
+  (Serve the first customer in line)
+
+- ⏱️ **FIFO (First In First Out) logic**  
+  (Used in queues, job scheduling)
+
+---
+
+# 4️⃣ unshift() 
+- Add value at the beginning
+
+```js
+let d = [10, 20, 30, 40, 50];
+
+console.log("Before unshift:", d);
+
+let newLength = d.unshift(5);
+
+console.log("New length:", newLength);
+console.log("After unshift:", d);
+
+```
+## Output :
+- Before unshift: [10, 20, 30, 40, 50]
+- New length: 6
+- After unshift: [5, 10, 20, 30, 40, 50]
+
+### ✅ Use Cases
+
+- 🚨 **Add high-priority task**  
+  (Insert urgent task at the top of task list)
+
+- 📢 **Show latest notification first**  
+  (New notification appears at the beginning)
+
+- 🛒 **Add featured product at top**  
+  (Highlight special item in product list)
+
+- ⏱️ **Queue management**  
+  (Add important job to be processed first)
+
+---
+# 5️⃣ splice() 
+- Add / Remove value from a specific position
+
+> `splice()` changes the **original array**.  
+> It can **remove**, **add**, or **replace** values at a specific index.
+
+---
+
+### 🔹 Syntax
+
+```js
+array.splice(startIndex, deleteCount, newItem);
+
+```
+
+## 🔹 Example
+```js
+let e = [10, 20, 30, 40, 50];
+e.splice(3, 2);
+
+console.log(e);
+```
+
+###  Output: [10, 20, 30]
+
+## ✅ Use Case – Remove product from cart
+```js
+let cart = ["Mobile", "Laptop", "Headphones"];
+
+cart.splice(1, 1); // index 1 thi 1 item remove
+console.log(cart);
+```
+
+### Output: ["Mobile", "Headphones"]
+
+---
+
+# 6️⃣ slice() 
+- Extract a portion of an array
+- slice() does NOT change the original array.
+- It returns a new array.
+
+## 🔹 Syntax
+```js
+array.slice(startIndex, endIndex);
+```
+## 🔹 Example
+```js
+let f = [10, 20, 30, 40, 50];
+let newArray = f.slice(1, 4);
+
+console.log(newArray);
+
+```
+### Output: [20, 30, 40]
+
+## ✅ Use Case – Featured products list
+
+```js
+let products = ["Mobile", "Laptop", "Tablet", "Watch", "Camera"];
+
+let featured = products.slice(0, 3);
+
+console.log(featured);
+// ["Mobile", "Laptop", "Tablet"]
+
+console.log(products);
+// Original array remains same
+```
+---
+
+# 7️⃣ reverse() 
+- Reverse the array
+
+> `reverse()` **changes the original array**.  
+> It reverses the order of elements.
+
+---
+
+## 🔹 Example
+
+```js
+let g = [10, 20, 30, 40, 50];
+
+g.reverse();
+console.log(g);
+```
+### Output: [50, 40, 30, 20, 10]
+
+## ✅ Use Case – Reverse names list
+```js
+let names = ["Alice", "Bob", "Charlie"];
+
+names.reverse();
+console.log(names);
+// ["Charlie", "Bob", "Alice"]
+```
+
+# 8️⃣ sort() 
+- Sort the array
+- sort() sorts values as strings by default
+- It also changes the original array.
+
+## 🔹 Example
+```js
+let h = [50, 20, 40, 10, 30];
+
+h.sort();
+console.log(h);
+```
+
+###  Output: [10, 20, 30, 40, 50]
+
+## ✅ Use Case – Sort scores
+```js
+let scores = [85, 42, 96, 73, 58];
+
+scores.sort();
+console.log(scores);
+// [42, 58, 73, 85, 96]
+```
+---
+# 📊 JavaScript Array Methods – Quick Table
+
+| Method | Purpose | Changes Original Array | Use Case |
+|------|--------|------------------------|---------|
+| `push()` | Add value at the end | ✅ Yes | Add product to cart |
+| `pop()` | Remove value from the end | ✅ Yes | Undo last action |
+| `shift()` | Remove value from start | ✅ Yes | Queue processing |
+| `unshift()` | Add value at start | ✅ Yes | Add priority task |
+| `splice()` | Add / Remove at specific index | ✅ Yes | Remove item from cart |
+| `slice()` | Copy part of array | ❌ No | Featured products |
+| `reverse()` | Reverse array order | ✅ Yes | Show latest first |
+| `sort()` | Sort array | ✅ Yes | Rank, price sorting |
+
+---
