@@ -119,53 +119,111 @@ a.push(700);
 // // [42, 58, 73, 85, 96]
 
 // Examples
-// ✅ Q1. push()
-
+// ✅ Examples 1
 let tasks = ['Wake up', 'Brush teeth'];
 tasks.push('Buy milk');
 
-// output: ['Wake up', 'Brush teeth', 'Buy milk']
-
-// Why :- 
-// push() adds an element at the end of the array and changes the original array.
-
-// ✅ Q2. pop()
+// ✅  Examples 2
 
 let notifications = ['Email', 'Message', 'Reminder'];
 notifications.pop();
 
-// output: ['Email', 'Message']
-
-// Why :-
-//pop() removes the last element and mutates the array.
-
-// ✅ Q3. shift()
+// ✅  Examples 3
 
 let customers = ['Customer1', 'Customer2', 'Customer3'];
 customers.shift();
 
-// output: ['Customer2', 'Customer3']
-
-// Why :--
-// shift() removes the first element from the array and modifies the original array.
-
-// ✅ Q4. unshift()
+// ✅  Examples 4
 
 let playlist = ['Song B', 'Song C'];
 playlist.unshift('Song A');
 
-// output: ['Song A', 'Song B', 'Song C']
-
-// Why :-
-// unshift() adds an element at the beginning of the array and changes the original array.
-
-// ✅ Q5. splice()
+// ✅  Examples 5
 
 let students = ['Mike', 'Alex', 'Emma', 'Sophia'];
 students.splice(1, 1, 'John', 'Sara');
 
-// output: ['Mike', 'John', 'Sara', 'Emma', 'Sophia']
+// ✅  Examples 6
+let colors = ['Red', 'Green', 'Blue', 'Yellow', 'Purple'];
+let primaryColors = colors.slice(0, 3);
 
-// Why :-
-// splice() can add/remove elements at a specific index and modifies the original array.
+// ✅  Examples 7
+
+let digits = [1, 2, 3, 4, 5];
+digits.reverse();   
+
+// ✅  Examples 8
+
+let ages = [25, 18, 30, 22, 27];
+ages.sort();    
+
+// ✅  Examples 9
+
+let scores = [45, 12, 78, 34, 89];
+scores.sort((a, b) => a - b);
+
+// ✅  Examples 10
+
+let prices = [199, 49, 999, 299, 149];
+prices.sort((a, b) => a - b);
+
+// ✅  Examples 11
+
+let products = ['Laptop', 'Phone', 'Tablet', 'Monitor', 'Keyboard'];
+let firstThree = products.slice(0, 3);
+
+// ✅  Examples 12
+
+let fruits = ['Apple', 'Banana', 'Cherry', 'Date'];
+fruits.splice(2, 1, 'Mango', 'Pineapple');
+
+// ✅  Examples 13
+
+let steps = ['Step 1', 'Step 2', 'Step 3'];
+steps.reverse();
+steps.push('Final Step');
+
+// ✅  Examples 14
+
+let names = ['alice', 'Bob', 'charlie', 'David'];
+names.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+
+// ✅  Examples 15
+
+let movies = ['Avatar', 'Titanic', 'Gladiator'];
+
+movies.push('Inception');   // add
+movies.shift();             // remove first
+movies.sort();              // sort
+
+// ✅  Examples 16
+
+let nums1 = [1, 2, 3, 4];
+let removed = nums1.splice(1, 2);
+
+// ✅  Examples 17
+
+let nums2 = [10, 20, 30, 40];
+let result = nums2.slice(1, 3);
+
+// ✅  Examples 18
+
+let letters = ['a', 'b', 'c'];
+let reversedLetters = letters.reverse();
+
+// ✅  Examples 19
+
+let arr = ['x', 'y', 'z'];
+arr.splice(1, 0, 'new');
+
+// ✅  Examples 20
+
+let values = [100, 200, 300, 400, 500];
+let sliced = values.slice(-3, -1);
+
+// ✅  Examples 21
+
+let arr2 = [1, 2, 3];
+arr2.push(arr2.shift());
+
 
