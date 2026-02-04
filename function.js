@@ -375,16 +375,3 @@ function temp_fnc(){
 //   }
 // }
 
-//  Function Examples
-
-//❓ Difference between Function Declaration & Function Expression (Hoisting)
-
-// ✅ Answer:
-// | Feature                    | Function Declaration | Function Expression |
-// | -------------------------- | -------------------- | ------------------- |
-// | Hoisting                   | ✅ Yes                | ❌ No                |
-// | Can call before definition | ✅ Yes                | ❌ No                |
-
-
-// ## Example 2: Predict Output
-
