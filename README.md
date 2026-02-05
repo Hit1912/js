@@ -1836,3 +1836,163 @@ console.log(arr2);
 - This rotates the array left by one position.
 
 ---
+# 📘 JavaScript Array Methods & Operators
+
+> Simple theory + real examples for strong fundamentals 🚀  
+> This guide explains commonly used **JavaScript array methods** and **operators** with clear examples.
+
+---
+## 🔹 1. forEach() Loop
+
+`forEach()` array ni **darek value mate loop chalave chhe**.  
+⚠️ It does **not return a new array**.
+
+```js
+let i = [10, 35, 40, 68];
+
+i.forEach((val) => {
+    let new_val = val + 10;
+    console.log(new_val);
+});
+
+```
+
+## 🔹 2. map() Method
+
+- map() tyare use karo jyare ek new array create karvo hoy.
+- ➡️ Original array change nathi thato.
+```js
+let data = [10, 20, 50, 40, 15];
+
+let temp_data = data.map((val) => {
+    if (val > 20) {
+        return val;
+    }
+});
+
+```
+
+## 🔹 3. filter() Method
+
+- filter() condition based new array create kare chhe.
+- Rules:
+- return true → element add thase
+- return false → element skip thase
+```js
+let laptops_price = [15000, 20000, 3000, 65000, 99000, 45000];
+
+let expensive_laptops = laptops_price.filter((price) => {
+    if (price > 30000) return true;
+});
+```
+
+## 🔹 4. reduce() Method
+- reduce() use karo jyare array mathi ek single value calculate karvi hoy.
+```js
+let total_price = [10, 68, 45, 58, 48];
+
+let final_price = total_price.reduce((z, val) => {
+    return z + val;
+}, 0);
+
+console.log("final price:", final_price);
+```
+
+## 🔹 5. find() Method
+
+- find() array mathi pehli matching value return kare chhe.
+- ➡️ Loop first match pachi stop thai jay chhe.
+
+```js
+let product = ["Laptop", "Mobile", "Tablet", "Desktop", "Smart Watch"];
+
+let find_product = product.find((item) => {
+    if (item === "Tablet") {
+        return true;
+    }
+});
+
+```
+
+## 🔹 find() vs filter()
+```js
+let people = ["John", "Sara", "Mike", "Anna", "David", "Sara"];
+
+let person = people.find((name) => name === "Sara");
+console.log(person); // Sara
+
+let allSara = people.filter((name) => name === "Sara");
+console.log(allSara); // ["Sara", "Sara"]
+```
+
+## 🔹 6. some() Method
+
+- some() check kare chhe ke array ma koi pan ek item condition satisfy kare chhe ke nahi.
+- ➡️ Return: true / false
+```js
+let marks1 = [10, 20, 35, 80];
+
+let any = marks1.some((val) => {
+    if (val > 85) return true;
+});
+
+```
+
+## 🔹 7. every() Method
+- every() check kare chhe ke baddha j items condition satisfy kare chhe ke nahi.
+```js
+
+let def = [20, 30, 40, 50];
+
+let num = def.every(function(val) {
+    return val < 40;
+});
+
+```
+## 🔹 some() vs find() vs filter() vs every()
+
+| Method   | Condition         | Output               |
+| -------- | ----------------- | -------------------- |
+| some()   | item === "Mobile" | true                 |
+| find()   | item === "Mobile" | "Mobile"             |
+| filter() | item === "Mobile" | ["Mobile", "Mobile"] |
+| every()  | item === "Mobile" | false                |
+
+
+## 🔹 8. Destructuring Operator
+
+- Array mathi value direct variable ma store karva.
+```js
+
+let arr4 = [1, 2, 3, 4, 5];
+let [ , , k] = arr4;
+
+console.log(k); // 3
+```
+
+## 9. Spread Operator
+
+- Array ni copy create kare chhe (reference nahi).
+
+```js
+
+let arr8 = [1, 2, 3, 4, 5, 6, 7];
+
+let arr9 = [...arr8];
+
+```
+
+## 📊 JavaScript Array Methods Comparison Table
+
+| Method | Return Type | New Array | Stops Early | Use Case |
+|------|------------|-----------|-------------|----------|
+| forEach() | ❌ nothing | ❌ No | ❌ No | Just loop through array |
+| map() | ✅ Array | ✅ Yes | ❌ No | Transform each element |
+| filter() | ✅ Array | ✅ Yes | ❌ No | Get data based on condition |
+| reduce() | ✅ Single value | ❌ No | ❌ No | Sum / total / calculation |
+| find() | ✅ Element | ❌ No | ✅ Yes | Find first matching item |
+| some() | ✅ Boolean | ❌ No | ✅ Yes | Check if **any one** matches |
+| every() | ✅ Boolean | ❌ No | ❌ No | Check if **all** match |
+
+---
+
