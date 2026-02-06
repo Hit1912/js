@@ -951,7 +951,7 @@ MAP + FILTER + REDUCE PRACTICE (Q1–Q20)
 /* =========================
 Q1. Grocery Store – Total Cost
 ========================= */
-const prices1 = [50, 120, 300, 80, 200];
+const prices10 = [50, 120, 300, 80, 200];
 
 const totalCost = prices1
   .filter(price => price > 100)
@@ -968,7 +968,7 @@ Q2. Fitness App – Weekly Calories
 ========================= */
 const minutes1 = [10, 25, 40, 15, 60];
 
-const totalCalories = minutes1
+const totalCalories11 = minutes1
   .filter(min => min >= 20)
   .map(min => min * 4)
   .reduce((sum, cal) => sum + cal, 0);
@@ -981,7 +981,7 @@ console.log(totalCalories);
 /* =========================
 Q3. Exam Results – Total Passed Marks
 ========================= */
-const marks1 = [35, 55, 80, 20, 45];
+const marks10 = [35, 55, 80, 20, 45];
 
 const totalPassedMarks = marks1
   .filter(mark => mark >= 40)
@@ -995,7 +995,7 @@ console.log(totalPassedMarks);
 /* =========================
 Q4. Bank App – Total Credits
 ========================= */
-const transactions1 = [500, -200, 1000, -300, 700];
+const transactions10 = [500, -200, 1000, -300, 700];
 
 const totalCredits = transactions1
   .filter(amount => amount > 0)
@@ -1009,7 +1009,7 @@ console.log(totalCredits);
 /* =========================
 Q5. Online Sale – Discounted Bill
 ========================= */
-const prices2 = [800, 1500, 3000, 600, 1200];
+const prices20 = [800, 1500, 3000, 600, 1200];
 
 const discountedBill = prices2
   .filter(price => price > 1000)
@@ -1099,7 +1099,7 @@ console.log(electricityBill);
 /* =========================
 Q11. Game Scores – Final Power Score
 ========================= */
-const scores1 = [30, 50, 90, 20, 70];
+const scores11 = [30, 50, 90, 20, 70];
 
 const powerScore = scores1
   .filter(score => score > 40)
@@ -1174,7 +1174,7 @@ console.log(fuelCost);
 /* =========================
 Q16. Interview Classic – Sum of Cubes
 ========================= */
-const numbers1 = [1, 2, 3, 4, 5];
+const numbers10 = [1, 2, 3, 4, 5];
 
 const sumOfCubes = numbers1
   .filter(num => num % 2 !== 0)
@@ -1189,7 +1189,7 @@ console.log(sumOfCubes);
 /* =========================
 Q17. Performance Tracking – Bonus Points
 ========================= */
-const scores2 = [10, 20, 30, 40, 50];
+const scores20 = [10, 20, 30, 40, 50];
 const avg = scores2.reduce((a, b) => a + b, 0) / scores2.length;
 
 const bonusScore = scores2
