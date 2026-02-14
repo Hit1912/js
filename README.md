@@ -1996,3 +1996,997 @@ let arr9 = [...arr8];
 
 ---
 
+# JavaScript Interview Questions – Beginner to Advanced
+
+---
+
+# 🟢 BEGINNER LEVEL (1–20)
+
+### Q1. Variables
+
+`var` is function-scoped and can be redeclared.
+`let` is block-scoped and can be reassigned.
+`const` is block-scoped and cannot be reassigned.
+
+---
+
+### Q2. Data Types
+
+Primitive types:
+
+* String
+* Number
+* Boolean
+* Undefined
+* Null
+* BigInt
+* Symbol
+
+---
+
+### Q3. Type Checking
+
+Use `typeof` operator.
+
+---
+
+### Q4. Operators
+
+`==` compares values with type conversion.
+`===` compares value and type (strict equality).
+
+---
+
+### Q5. Arithmetic Operators
+
+Output: `20`
+(5 * 2 = 10, then 10 + 10 = 20)
+
+---
+
+### Q6. String Concatenation
+
+Output: `'52'` (Number 2 is converted to string)
+
+---
+
+### Q7. Boolean Logic
+
+Output: `false`
+
+---
+
+### Q8. Functions
+
+A function is a reusable block of code used to perform a task.
+
+---
+
+### Q9. Function Call
+
+Returns: `5`
+
+---
+
+### Q10. Arrays
+
+`let arr = [1, 2, 3];`
+
+---
+
+### Q11. Array Access
+
+Output: `20`
+
+---
+
+### Q12. Objects
+
+An object stores data in key–value pairs.
+
+---
+
+### Q13. Object Access
+
+Output: `20`
+
+---
+
+### Q14. Control Flow
+
+`if` statement runs code when a condition is true.
+
+---
+
+### Q15. Condition Check
+
+Output: `Yes`
+
+---
+
+### Q16. Loops
+
+A loop repeats code multiple times.
+
+---
+
+### Q17. for Loop
+
+Output:
+0
+1
+2
+
+---
+
+### Q18. while Loop
+
+Use when number of iterations is unknown and depends on condition.
+
+---
+
+### Q19. Increment Operator
+
+Output: `6`
+
+---
+
+### Q20. Comments
+
+Single-line: `// comment`
+Multi-line: `/* comment */`
+
+---
+
+# 🟡 INTERMEDIATE LEVEL (21–35)
+
+### Q21. Scope
+
+Block scope means variables declared with `let` and `const` are only accessible inside `{}`.
+
+---
+
+### Q22. Hoisting
+
+Hoisting moves variable and function declarations to the top of their scope before execution.
+
+---
+
+### Q23. Undefined vs Null
+
+`undefined` means variable declared but not assigned.
+`null` means intentionally empty value.
+
+---
+
+### Q24. Truthy & Falsy
+
+Falsy values:
+
+* false
+* 0
+* -0
+* ""
+* null
+* undefined
+* NaN
+
+---
+
+### Q25. Functions vs Arrow Functions
+
+Arrow functions:
+
+* Shorter syntax
+* No own `this`
+* Cannot be used as constructors
+
+---
+
+### Q26. Parameters vs Arguments
+
+Parameters are variables in function definition.
+Arguments are actual values passed.
+
+Example:
+`function add(a, b)` → parameters
+`add(2, 3)` → arguments
+
+---
+
+### Q27. Return Keyword
+
+If nothing is returned, function returns `undefined`.
+
+---
+
+### Q28. Array Methods
+
+`push()` adds to end.
+`pop()` removes from end.
+
+---
+
+### Q29. Loop vs Array Methods
+
+Use loops when you need more control or complex conditions.
+
+---
+
+### Q30. Object Iteration
+
+Using `for...in` loop or `Object.keys()`.
+
+---
+
+### Q31. Break & Continue
+
+`break` stops loop.
+`continue` skips current iteration.
+
+---
+
+### Q32. Comparison Operators
+
+`0 == false` → true
+`0 === false` → false
+
+---
+
+### Q33. Ternary Operator
+
+`status = age >= 18 ? 'adult' : status;`
+
+---
+
+### Q34. Array Destructuring
+
+Extract values from array into variables.
+
+Example:
+`const [a, b] = [1, 2];`
+
+---
+
+### Q35. Spread Operator
+
+Expands array elements.
+
+Example:
+`[...arr]` creates copy.
+
+---
+
+# 🔵 ADVANCED LEVEL (36–50)
+
+### Q36. Closures
+
+A closure is a function that remembers variables from outer scope.
+
+Example:
+
+```
+function outer() {
+  let count = 0;
+  return function() {
+    count++;
+    return count;
+  };
+}
+```
+
+---
+
+### Q37. Execution Context
+
+Environment where JavaScript code runs (Global and Function context).
+
+---
+
+### Q38. Call Stack
+
+A stack that keeps track of function calls.
+
+---
+
+### Q39. Pass by Value vs Reference
+
+Primitive types pass by value.
+Objects/arrays pass by reference.
+
+---
+
+### Q40. Shallow vs Deep Copy
+
+Shallow copy copies reference.
+Deep copy creates completely new copy.
+
+---
+
+### Q41. Higher-Order Functions
+
+A function that takes another function as argument or returns one.
+
+---
+
+### Q42. Callback Functions
+
+A function passed into another function.
+
+---
+
+### Q43. Immutability
+
+Prevents direct data modification, improves predictability and debugging.
+
+---
+
+### Q44. Event Loop
+
+Handles asynchronous operations by moving tasks from callback queue to call stack.
+
+---
+
+### Q45. Synchronous vs Asynchronous
+
+Synchronous runs line by line.
+Asynchronous runs without blocking execution.
+
+---
+
+### Q46. forEach vs map
+
+`forEach()` does not return new array.
+`map()` returns new transformed array.
+
+---
+
+### Q47. == Interview Trap ⭐
+
+Output: `false` (Different references)
+
+---
+
+### Q48. typeof Interview Trap ⭐
+
+Output: `"object"`
+
+---
+
+### Q49. NaN Check
+
+Use `Number.isNaN(value)`.
+
+---
+
+### Q50. FINAL INTERVIEW QUESTION ⭐⭐⭐
+
+1. Code is parsed.
+2. Execution context is created.
+3. Variables are hoisted.
+4. Code runs line by line.
+5. Functions go into call stack.
+6. Asynchronous tasks go to Web APIs.
+7. Event loop pushes completed tasks back to call stack.
+
+---
+
+# JavaScript Practice – Answers, Errors, How & Why
+
+> Concise explanations with code + reasoning.
+
+---
+
+# 🟢 VARIABLES & DATA TYPES (1–15)
+
+```js
+let a = "a";
+let b = "10";
+let c = 10;
+let d;
+let e = null;
+```
+
+### 1
+
+```js
+console.log(a == "a");  // true
+console.log(a === "a"); // true
+```
+
+Both value & type same → both true.
+
+### 2
+
+```js
+console.log(b == c);  // true  ("10" → 10 coercion)
+console.log(b === c); // false (string !== number)
+```
+
+`==` allows coercion, `===` doesn’t.
+
+### 3
+
+```js
+b = Number(b);
+console.log(b === c); // true
+```
+
+Converted string to number.
+
+### 4
+
+```js
+console.log(d === undefined);
+```
+
+Direct strict comparison.
+
+### 5
+
+```js
+if (d == null) console.log("null or undefined");
+```
+
+`== null` safely checks both.
+
+### 6
+
+```js
+console.log(null == undefined);  // true
+console.log(null === undefined); // false
+```
+
+Loose equality treats them equal.
+
+### 7
+
+```js
+console.log(c + b);        // "1010" (string concat)
+console.log(c + Number(b)); // 20 (fixed)
+```
+
+String causes coercion.
+
+### 8
+
+```js
+let result = c / "a";
+console.log(Number.isNaN(result)); // true
+```
+
+Invalid math → NaN.
+
+### 9
+
+```js
+Number(b);
++b;
+```
+
+Two number conversions.
+
+### 10
+
+```js
+String(c);
+c.toString();
+```
+
+Two string conversions.
+
+### 11
+
+```js
+Boolean(value);
+!!value;
+```
+
+Double NOT converts to boolean.
+
+### 12
+
+```js
+const x = 5;
+// x = 10; ❌ Error: Assignment to constant variable
+```
+
+`const` prevents reassignment.
+
+### 13
+
+```js
+let p = 5;
+let q = p;
+q = 10;
+console.log(p); // 5
+```
+
+Primitives copy by value.
+
+### 14
+
+```js
+console.log(0 == false); // true
+```
+
+Looks false, but coercion makes it true.
+
+### 15
+
+```js
+// Buggy
+if (b == 10)
+// Fix
+if (b === 10)
+```
+
+Use strict equality.
+
+---
+
+# 🟢 OPERATORS (16–30)
+
+### 16
+
+```js
+(n & 1) === 0
+```
+
+Bitwise check for even.
+
+### 17
+
+```js
+a > b ? a : b;
+```
+
+Ternary max.
+
+### 18
+
+```js
+function calc(a,b,op){
+ if(op==="+") return a+b;
+ if(op==="-") return a-b;
+ if(op==="*") return a*b;
+ if(op==="/") return a/b;
+}
+```
+
+### 19
+
+```js
+let name = input || "Guest";
+```
+
+OR gives default.
+
+### 20
+
+```js
+age>=18 ? "Adult" : "Minor";
+```
+
+### 21
+
+```js
+score>90?"A":score>75?"B":"C";
+```
+
+Nested ternary.
+
+### 22
+
+```js
+isLoggedIn && showDashboard();
+```
+
+Runs only if true.
+
+### 23
+
+```js
+console.log(false && "Hello"); // false
+console.log(true || "Hi");     // true
+```
+
+Short-circuiting.
+
+### 24
+
+```js
+console.log("5" == 5);  // true
+console.log("5" === 5); // false
+```
+
+### 25
+
+```js
+let val = e ?? "Default";
+```
+
+Only null/undefined replaced.
+
+### 26
+
+```js
+0 || 10; // 10
+0 ?? 10; // 0
+```
+
+`||` treats falsy, `??` doesn’t.
+
+### 27
+
+```js
+[...arr1, ...arr2];
+```
+
+Merge arrays.
+
+### 28
+
+```js
+function sum(...nums){}
+```
+
+Rest collects args.
+
+### 29
+
+```js
+const copy = [...arr];
+```
+
+Shallow copy.
+
+### 30
+
+```js
+console.log(2 + 3 * 4);   // 14
+console.log((2 + 3) * 4); // 20
+```
+
+Precedence matters.
+
+---
+
+# 🟡 CONTROL FLOW (31–45)
+
+### 31
+
+```js
+if(score>=90) grade="A";
+else if(score>=75) grade="B";
+else grade="C";
+```
+
+### 32
+
+```js
+switch(true){
+ case score>=90: grade="A"; break;
+}
+```
+
+### 33
+
+Missing `break` executes next case.
+
+### 34
+
+Nested login validation checks user + password.
+
+### 35
+
+```js
+if(user && pass) login();
+```
+
+Clean condition.
+
+### 36
+
+```js
+if(a>0 && b>0){}
+```
+
+### 37
+
+Use `&&`, `||`, `!`.
+
+### 38
+
+Menu using `switch(option)`.
+
+### 39
+
+Without break → fall-through.
+
+### 40
+
+Switch logic rewritten using `if-else`.
+
+### 41
+
+```js
+if(num>=1 && num<=10){}
+```
+
+### 42
+
+```js
+if(!valid) return;
+```
+
+Early exit.
+
+### 43
+
+Switch for red/yellow/green.
+
+### 44
+
+Real rule → condition statements.
+
+### 45
+
+Check null, empty, negative first.
+
+---
+
+# 🟡 LOOPS (46–60)
+
+### 46
+
+```js
+for(let i=1;i<=100;i++){}
+```
+
+### 47
+
+```js
+for(let i=2;i<=100;i+=2){}
+```
+
+### 48
+
+Use `break`.
+
+### 49
+
+Use `continue`.
+
+### 50
+
+Accumulator variable.
+
+### 51
+
+Reverse using `%` and `/`.
+
+### 52
+
+Count divisions by 10.
+
+### 53
+
+Multiply from 1→n.
+
+### 54
+
+Iterative Fibonacci using two vars.
+
+### 55
+
+Use label or flag.
+
+### 56
+
+Skip iteration with `continue`.
+
+### 57
+
+Nested loops.
+
+### 58
+
+Infinite loop when condition never false → fix condition.
+
+### 59
+
+`for` known count, `while` unknown.
+
+### 60
+
+Use `map`, `filter`, `reduce`.
+
+---
+
+# 🟡 FUNCTIONS (61–80)
+
+### 61
+
+```js
+function sum(a,b){return a+b;}
+```
+
+### 62
+
+```js
+const sum=(a,b)=>a+b;
+```
+
+### 63
+
+```js
+function greet(name="Guest"){}
+```
+
+### 64
+
+Return inner function.
+
+### 65
+
+Pass function as argument.
+
+### 66
+
+Callback executed inside function.
+
+### 67
+
+Pure: no side effects.
+
+### 68
+
+Side effect: modifies outer variable.
+
+### 69
+
+Recursive factorial with base case.
+
+### 70
+
+Loop version of factorial.
+
+### 71
+
+Rest parameter.
+
+### 72
+
+Higher-order: takes/returns function.
+
+### 73
+
+Closure remembers outer variable.
+
+### 74
+
+Counter using closure.
+
+### 75
+
+Currying: `f(a)(b)`.
+
+### 76
+
+Memoization using cache object.
+
+### 77
+
+Guard clause for invalid input.
+
+### 78
+
+Arrow has no own `this`.
+
+### 79
+
+Use flag to run once.
+
+### 80
+
+Move repeated code into function.
+
+---
+
+# 🔵 ARRAYS (81–101)
+
+### 81
+
+`arr.reduce((a,b)=>a+b,0)`
+
+### 82
+
+Track max in loop.
+
+### 83
+
+`[...new Set(arr)]`
+
+### 84
+
+Sort then pick second.
+
+### 85
+
+`arr.filter(n=>n>0)`
+
+### 86
+
+`arr.map(n=>n*n)`
+
+### 87
+
+`arr.reduce(c=>c+1,0)`
+
+### 88
+
+Chain methods.
+
+### 89
+
+`arr.find(cond)`
+
+### 90
+
+`arr.some(cond)`
+
+### 91
+
+`arr.every(cond)`
+
+### 92
+
+`const [first,...rest]=arr`
+
+### 93
+
+`[...a,...b]`
+
+### 94
+
+`JSON.parse(JSON.stringify(arr))` (simple deep copy)
+
+### 95
+
+Manual bubble sort.
+
+### 96
+
+Use slice + concat.
+
+### 97
+
+`arr.flat(Infinity)`
+
+### 98
+
+Custom map using loop + push.
+
+### 99
+
+Custom filter using condition.
+
+### 100
+
+Custom reduce using accumulator.
+
+### 101 
+
+Example:
+
+```js
+arr
+ .filter(n=>n>0)
+ .map(n=>n*2)
+ .reduce((a,b)=>a+b,0);
+```
+
+Combine constraints step-by-step.
+
+---
