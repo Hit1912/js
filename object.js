@@ -115,3 +115,69 @@ let clone_user1 = JSON.parse(JSON.stringify(user1))
 // API response handling
 // Avoid data mutation bugs
 
+// object.key -- add all keys into array formate
+let key_arr = Object.keys(demo);
+// Use case: User profile form validation
+// ex. website par thi user form ma data add kare chhe ane te data 
+// backend pase object formate ma aave chhe
+// const userProfile = {
+//   name: "Rahul",
+//   email: "rahul@gmail.com",
+//   age: 25
+// };
+// now check how many field user fill up
+// const keys = Object.keys(userProfile);
+// console.log(keys);
+// console.log(keys.length);
+
+// Object.entries -- add key and value into array formate
+// give array of arrays
+let key_value_arr = Object.entries(demo);
+// Use case: Display user details dynamically (UI)
+// ex. backend give you data into object formate
+// const user3 = {
+//   name: "Priya",
+//   city: "Ahmedabad",
+//   role: "Admin"
+// };
+// print key and value both in profile page
+// Object.entries(user3).forEach(([key, value]) => {
+//   console.log(`${key} : ${value}`);
+// });
+// Object.entries(user) ==> convet into Arrays
+// forEach ==> Array loop
+
+// Optional Chaining, Computed Properties
+// user1.address.location.lng;
+user1?.address?.location?.lng; //-- ? Optional Chaining
+// use case:
+// Without optional chaining -> app crash
+// Backend data incomplete
+// API response safety
+// const apiResponse = {
+//   user: {
+//     profile: {
+//       name: "Neha"
+//     }
+//   }
+// };
+// console.log(apiResponse.user?.profile?.name);
+// console.log(apiResponse.user?.address?.city);
+
+// Computed Properties
+let role = "admin";
+let user2 = {
+  name: "test",
+  age: 26,
+  email: "test@gmail.com",
+  address:{
+    city: "Surat"
+  },
+  [role]: "test"
+}
+// Use case: Dynamic object keys
+// const fieldName = "email";
+// const user = {
+//   name: "Ravi",
+//   [fieldName]: "ravi@gmail.com"
+// };
