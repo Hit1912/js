@@ -69,6 +69,17 @@ border_inp.addEventListener("change", (dets) => {
     box.style.borderColor = dets.target.value;
 });
 
+//Key Down
+let text = document.querySelector(".keydown");
+
+text.addEventListener("keydown", () => {
+text.style.backgroundColor = "black"
+text.style.color = "white"
+text.style.width = "5rem"
+});
+
+//key down ---> keyboard checker
+
 
 // mousemove and mouseout
 let box2 = document.querySelector(".box2");
