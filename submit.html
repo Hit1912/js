@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Card</title>
+</head>
+<style>
+    /* Basic styles for the form and card layout */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+    }
+    input[type="text"] {
+        width: 300px;
+        padding: 10px;
+        margin: 5px 0;
+    }
+    input[type="email"] {
+        width: 300px;
+        padding: 10px;
+        margin: 5px 0;
+    }
+    input[type="number"] {
+        width: 300px;
+        padding: 10px;
+        margin: 5px 0;
+    }
+    input[type="submit"] {
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+    /* Card styles */
+    *{
+        margin:0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    form {
+     padding: 20px;
+    }
+    .card {
+    width: 250px;
+    height: auto;
+    border: 1px solid lightblue;
+    margin: 10px 20px;
+    padding: 10px;
+    display: inline-block;
+    }
+    .dp-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    }
+    .dp-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    }
+</style>
+<body>
+    <h1>Submit Your Card</h1>
+        <form>
+            <input type="text" placeholder="link "><br>
+            <input type="text" placeholder="name"><br>
+            <input type="text" placeholder="bio"><br>
+            <input type="email" placeholder="email"><br>
+            <input type="number" placeholder="phone number"><br>
+            <input type="submit" value="Submit"><br>
+        </form>
+    <!-- <div class="card">
+<div class="dp-img">
+<img
+src="https://images.unsplash.com/
+photo-1698510047345-ff32de8a3b74?w=500&auto=format&
+fit=crop&q=60&ixlib=rb-4.1.0&
+ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cHJvZmlsZSUyMGltYWdlfGVu
+fDB8fDB8fHww"
+alt=""
+/>
+</div>
+<h3>Username</h3>
+<h4>bio</h4>
+<h5>email</h5>
+<h6>phone Number</h6>
+</div> -->
+    <!-- JS file at bottom -->
+    <script src="submit.js"></script>
+</body>
+</html>

@@ -1,0 +1,374 @@
+
+
+## create Readmd.md file and write the answers of all questions
+## 🟢 BEGINNER LEVEL (1–20)
+
+### Q1. Variables
+
+What is the difference between `var`, `let`, and `const`?
+
+---
+
+### Q2. Data Types
+
+Name all primitive data types in JavaScript.
+
+---
+
+### Q3. Type Checking
+
+How do you check the type of a variable?
+
+---
+
+### Q4. Operators
+
+What is the difference between `==` and `===`?
+
+---
+
+### Q5. Arithmetic Operators
+
+What will be the output?
+
+```js
+let x = 10;
+console.log(x + 5 * 2);
+```
+
+---
+
+### Q6. String Concatenation
+
+What is the output?
+
+```js
+console.log('5' + 2);
+```
+
+---
+
+### Q7. Boolean Logic
+
+What is the result?
+
+```js
+console.log(true && false);
+```
+
+---
+
+### Q8. Functions
+
+What is a function and why is it used?
+
+---
+
+### Q9. Function Call
+
+What will this return?
+
+```js
+function add(a, b) {
+  return a + b;
+}
+add(2, 3);
+```
+
+---
+
+### Q10. Arrays
+
+How do you create an array in JavaScript?
+
+---
+
+### Q11. Array Access
+
+What is the output?
+
+```js
+const arr = [10, 20, 30];
+console.log(arr[1]);
+```
+
+---
+
+### Q12. Objects
+
+What is an object in JavaScript?
+
+---
+
+### Q13. Object Access
+
+What is the output?
+
+```js
+const user = { name: 'A', age: 20 };
+console.log(user.age);
+```
+
+---
+
+### Q14. Control Flow
+
+What does an `if` statement do?
+
+---
+
+### Q15. Condition Check
+
+What is the output?
+
+```js
+let x = 5;
+if (x > 3) console.log('Yes');
+```
+
+---
+
+### Q16. Loops
+
+What is a loop and why is it used?
+
+---
+
+### Q17. for Loop
+
+What is the output?
+
+```js
+for (let i = 0; i < 3; i++) {
+  console.log(i);
+}
+```
+
+---
+
+### Q18. while Loop
+
+When should you use a `while` loop?
+
+---
+
+### Q19. Increment Operator
+
+What is the result?
+
+```js
+let a = 5;
+a++;
+console.log(a);
+```
+
+---
+
+### Q20. Comments
+
+How do you write single-line and multi-line comments?
+
+---
+
+## 🟡 INTERMEDIATE LEVEL (21–35)
+
+### Q21. Scope
+
+What is block scope?
+
+---
+
+### Q22. Hoisting
+
+What is hoisting in JavaScript?
+
+---
+
+### Q23. Undefined vs Null
+
+Explain the difference between `undefined` and `null`.
+
+---
+
+### Q24. Truthy & Falsy
+
+List all falsy values in JavaScript.
+
+---
+
+### Q25. Functions vs Arrow Functions
+
+What is the difference between normal functions and arrow functions?
+
+---
+
+### Q26. Parameters vs Arguments
+
+Explain with an example.
+
+---
+
+### Q27. Return Keyword
+
+What happens if a function does not return anything?
+
+---
+
+### Q28. Array Methods
+
+What is the difference between `push()` and `pop()`?
+
+---
+
+### Q29. Loop vs Array Methods
+
+When should you use loops instead of array methods?
+
+---
+
+### Q30. Object Iteration
+
+How do you loop through object properties?
+
+---
+
+### Q31. Break & Continue
+
+Explain `break` and `continue` with loops.
+
+---
+
+### Q32. Comparison Operators
+
+What is the result?
+
+```js
+console.log(0 == false);
+console.log(0 === false);
+```
+
+---
+
+### Q33. Ternary Operator
+
+Rewrite using ternary:
+
+```js
+if (age >= 18) {
+  status = 'adult';
+}
+```
+
+---
+
+### Q34. Array Destructuring
+
+What is array destructuring?
+
+---
+
+### Q35. Spread Operator
+
+What does the spread operator do with arrays?
+
+---
+
+## 🔵 ADVANCED LEVEL (36–50)
+
+### Q36. Closures
+
+What is a closure? Give a simple example.
+
+---
+
+### Q37. Execution Context
+
+What is the JavaScript execution context?
+
+---
+
+### Q38. Call Stack
+
+What is the call stack?
+
+---
+
+### Q39. Pass by Value vs Reference
+
+Explain with arrays or objects.
+
+---
+
+### Q40. Shallow vs Deep Copy
+
+What is the difference?
+
+---
+
+### Q41. Higher-Order Functions
+
+What is a higher-order function?
+
+---
+
+### Q42. Callback Functions
+
+What is a callback function?
+
+---
+
+### Q43. Immutability
+
+Why is immutability important in JavaScript?
+
+---
+
+### Q44. Event Loop (Conceptual)
+
+What is the event loop?
+
+---
+
+### Q45. Synchronous vs Asynchronous
+
+Explain the difference.
+
+---
+
+### Q46. forEach vs map
+
+What is the difference?
+
+---
+
+### Q47. == Interview Trap ⭐
+
+What is the output?
+
+```js
+console.log([] == []);
+```
+
+---
+
+### Q48. typeof Interview Trap ⭐
+
+What is the output?
+
+```js
+console.log(typeof null);
+```
+
+---
+
+### Q49. NaN Check
+
+How do you check if a value is `NaN`?
+
+---
+
+### Q50. FINAL INTERVIEW QUESTION ⭐⭐⭐
+
+Explain how JavaScript code runs from start to finish (high-level).
+
+---

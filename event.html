@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(255, 255, 255);
+        }
+
+        #box {
+            width: 300px;
+            height: 300px;
+            border: 2px solid red;
+            margin-bottom: 20px;
+        }
+
+        .device {
+            text-transform: capitalize;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            border: 1px,solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="btn1">Dark Mode</button><br><br>
+
+
+    <div id="box"></div><br><br>
+    <button id="colorBtn">red</button><br><br>
+    <input type="text"><br><br>
+
+    <h2>Selected Device: <i class="device">none</i></h2>
+    <select class="sel">
+        <option>Select your Device</option>
+        <option value="phone">Phone</option>
+        <option value="laptop">Laptop</option>
+        <option value="watch">Watch</option>
+        <option value="Tablet">Tablet</option>
+    </select>
+    <br>
+
+    <div class="box"></div>
+    <br>
+    Change Backgroud Color: <input type="color" class="bg-inp">
+    Change Border Color: <input type="color" class="border-inp">
+
+    <!-- JS file at bottom -->
+    <script src="event.js"></script>
+</body>
+
+</html> 
