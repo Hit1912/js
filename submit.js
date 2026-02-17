@@ -38,6 +38,13 @@ form.addEventListener('submit', (e) => {
         
         console.log(card);
 
+        // Set Default
+            img.setAttribute('src', "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" );
+            h3.textContent = "User Name";
+            h4.textContent = "User Bio";
+            h5.textContent = "User Email";
+            h6.textContent = "User Phone";
+
         //text content add
         img.setAttribute('src', inp[0].value );
         h3.textContent = inp[1].value;

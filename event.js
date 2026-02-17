@@ -68,3 +68,16 @@ bg_inp.addEventListener("change", (dets) => {
 border_inp.addEventListener("change", (dets) => {
     box.style.borderColor = dets.target.value;
 });
+
+
+// mousemove and mouseout
+let box2 = document.querySelector(".box2");
+box2.addEventListener("mousemove", () => {
+    box2.style.backgroundColor = "green";
+    box2.style.width = "300px";
+});
+
+box2.addEventListener("mouseout", () => {
+    box2.style.backgroundColor = "skyblue";
+    box2.style.width = "100px";
+});    
