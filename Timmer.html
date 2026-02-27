@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Timmer</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#e6e6e6;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Center container */
+.main{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* Glass Card */
+.card{
+    width:600px;
+    padding:50px;
+    border-radius:25px;
+    background: linear-gradient(
+        135deg,
+        rgba(120,120,150,0.6),
+        rgba(60,60,120,0.8)
+    );
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    color:white;
+    text-align:center;
+    box-shadow:0 20px 40px rgba(0,0,0,0.25);
+}
+
+.card h1{
+    font-size:40px;
+    margin-bottom:20px;
+    font-weight:600;
+}
+
+.card p{
+    font-size:18px;
+    line-height:1.8;
+    opacity:0.9;
+    margin-bottom:30px;
+}
+
+/* Button */
+.card button{
+    padding:12px 30px;
+    border:none;
+    border-radius:10px;
+    background:#0d1b7e;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.card button:hover{
+    background:#08124f;
+    transform:scale(1.05);
+}
+</style>
+</head>
+
+<body>
+
+<div id="main">
+    <div class="card">
+        <h1>Welcome to Surat</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Exercitationem molestias veritatis quos.
+        </p>
+        <button>Close</button>
+    </div>
+</div>
+
+<script src="Timmer.js"></script>
+
+</body>
+</html>
