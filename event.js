@@ -83,6 +83,7 @@ text.style.width = "5rem"
 
 // mousemove and mouseout
 let box2 = document.querySelector(".box2");
+
 box2.addEventListener("mousemove", () => {
     box2.style.backgroundColor = "green";
     box2.style.width = "300px";
@@ -92,3 +93,10 @@ box2.addEventListener("mouseout", () => {
     box2.style.backgroundColor = "skyblue";
     box2.style.width = "100px";
 });    
+
+// ==================================================
+// Event Object:--
+sel.addEventListener("change", (dets)=>{
+console.log(dets); // ==> dets  -- that called event object
+});
+
