@@ -39,6 +39,7 @@ console.log(sessionStorage.getItem("email"));
 // clear
 // sessionStorage.clear();
 
+
 // Basic cookie structure (manual key = Value;)
 // Cookie --> store data into browser cookies
 // (Cookie data ne browser na cookies name ni property ma save
@@ -46,6 +47,54 @@ console.log(sessionStorage.getItem("email"));
 // when you reload web page data will be automatically send to
 // server
 // ~ 4 KB storage
+document.cookie = "name=test1";
 
 // max age
+document.cookie = "email=test@gmail.com; max-age=60";
+
+//PROJECT - 1
+
+//Dark light Mode ---> Save into local stroage
+let btn = document.querySelector("button");
+let body = document.querySelector("body");
+
+//localstoragre ---> value ----> classList.add(theme)
+if(body.classList.add(localStorage.getItem("theme")) === "dark"){
+    body.classname = ""
+    body.classList.add(localStorage.getItem("theme"));
+         btn.textContent ="Light Mode";
+        btn.style.color = "#222";
+        btn.style.backgroundColor = "#555";
+       localStorage.setItem("theme","dark") 
+}
+
+btn.addEventListener("click",() => {
+    console.log("btn clicked");
+
+    if(body.classList.contains("light")){
+        body.classList.remove("light");
+        body.classList.add("dark");
+        btn.textContent ="Light Mode";
+        btn.style.color = "#222";
+        btn.style.backgroundColor = "#555";
+       localStorage.setItem("theme","dark") 
+    }else{
+
+        body.classList.remove("dark");
+        body.classList.add("light");
+        btn.textContent ="Dark Mode";
+        btn.style.color = "rgb(224, 224, 224)";
+        btn.style.backgroundColor = "white";
+        localStorage.setItem("theme","light")
+    }
+});
+
+function Theme(){
+
+}
+
+//PROJECT - 2
+
+//SearchBar
+
 
