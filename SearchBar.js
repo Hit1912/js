@@ -121,15 +121,24 @@ const users = [
   },
 ];
  
- 
+ //console.log(users);
 let container = document.querySelector(".card-container")
-// create card
+
+ 
+//console.log(container);
+ 
+function showUsers(users){
+    users.forEach((data)=>{
+        
+        //console.log(data);
+        // create card
 // div(card)--> img(img) --> div (blur) -> div (content) [h2, p(card-text)]
 let card = document.createElement("div");
 card.classList.add("card");
 
 let img = document.createElement("img");
 img.classList.add("img")
+img.setAttribute("src",data.pic)
 
 let div_blur = document.createElement("div");
 div_blur.classList.add("blur");
@@ -138,16 +147,39 @@ let content = document.createElement("div");
 content.classList.add("content");
  
 let h2 = document.createElement("h2");
+h2.textContent =data.name;
  
 let p = document.createElement("p");
 p.classList.add("card-text");
- 
+ p.textContent = data.bio;
+
 container.appendChild(card);
 card.appendChild(img);
 card.appendChild(div_blur);
 card.appendChild(content);
 content.appendChild(h2);
 content.appendChild(p);
- 
-console.log(container);
- 
+        
+    })
+}
+showUsers(users);
+
+//Serch FUnction
+
+let inp = document.querySelector("input");
+
+inp.addEventListener("input",() =>{
+    container.innerHTML = "";
+    //Filter Method
+    console.log(inp.value)
+    let new_user = users.filter((data) =>{
+        let text = inp.value.charAt(0).toUpperCase() + inp.value.slice(1);
+        return data.name.startsWith(text);
+//data mate true avve te data return thase
+
+        // Search bar --> inp.value.tolowercase == user.name.tolowercase
+        //Method :- inp.value.chartAt(0).touppercase() + inp.value.sllice(1)
+    });
+        console.log(new_user);
+        showUsers(new_user);
+    });
