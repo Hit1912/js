@@ -58,16 +58,13 @@ form.addEventListener("submit", (e) => {
   });
   form.reset();
   formContainer.style.display = "none";
-  RenderUi();
 });
-
-
 function saveData(note) {
   let data = JSON.parse(localStorage.getItem("notes")) || [];
   data.push(note);
   localStorage.setItem("notes", JSON.stringify(data));
 }
-let stake = document.querySelector(".stack");
+let stack = document.querySelector(".stack");
 function RenderUi(data) {
   let allData = JSON.parse(localStorage.getItem("notes"));
   allData.forEach((element) => {
@@ -112,7 +109,7 @@ function RenderUi(data) {
     msg.innerHTML = `<i class="ri-message-line"></i> Message`;
 
     //APEND
-    stake.appendChild(card);
+    stack.appendChild(card);
     card.appendChild(img);
     card.appendChild(h2);
     card.appendChild(info1);
@@ -125,33 +122,27 @@ function RenderUi(data) {
     card.appendChild(buttons);
     buttons.appendChild(call);
     buttons.appendChild(msg);
-    console.log(stake);
+    console.log(stack);
   });
 }
 
 RenderUi();
 
-
-// Up 
 let upBtn = document.querySelector("#upBtn");
-
-upBtn.addEventListener("click", () => {
-    let lastchild = captureOwnerStack.lastElementChild;
-
-    if (lastchild) {
-        stake.append(lastchild,stake.firstElementChild);
-    }
-});
-
-
-//Down
-
 let downBtn = document.querySelector("#downBtn");
 
 upBtn.addEventListener("click", () => {
-    let firstchild = captureOwnerStack.firstElementChild;
+    let lastchild = stack.lastElementChild;
+if (lastchild) {
+    stack.appendChild(lastchild, stack.firstElementChild);
+}
+  stack.style.transform = "translateY(-10px)";
+});
 
-    if (firstchild) {
-        stake.append(firstchild,stake.firstElementChild);
-    }
+downBtn.addEventListener("click", () => {
+     let firstchild = stack.firstElementChild;
+if (firstchild) {
+    stack.appendChild(firstchild, stack.lastElementChild);
+}
+  stack.style.transform = "translateY(10px)";
 });
