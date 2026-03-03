@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add User</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+
+    <div class="min-h-screen flex items-center justify-center 
+                bg-gradient-to-br from-green-100 via-purple-100 to-pink-100">
+
+        <form class="bg-white w-[380px] p-6 rounded-2xl shadow-2xl space-y-4">
+
+            <h2 class="text-2xl font-semibold text-center text-gray-700">
+                Add User
+            </h2>
+
+            <!-- Name -->
+            <div>
+                <label class="block text-sm font-medium mb-1">Name</label>
+                <input type="text" name="name" placeholder="Enter name"
+                    class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm
+                           focus:outline-none focus:ring-2 focus:ring-purple-400">
+            </div>
+
+            <!-- Role -->
+            <div>
+                <label class="block text-sm font-medium mb-1">Role</label>
+                <input type="text" name="role" placeholder="Enter role"
+                    class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm
+                           focus:outline-none focus:ring-2 focus:ring-purple-400">
+            </div>
+
+            <!-- Bio -->
+            <div>
+                <label class="block text-sm font-medium mb-1">Bio</label>
+                <textarea name="bio" rows="3" placeholder="Write bio"
+                    class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm
+                           focus:outline-none focus:ring-2 focus:ring-purple-400"></textarea>
+            </div>
+
+            <!-- Photo URL -->
+            <div>
+                <label class="block text-sm font-medium mb-1">Photo URL</label>
+                <input type="text" name="img" placeholder="Paste image URL"
+                    class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm
+                           focus:outline-none focus:ring-2 focus:ring-purple-400">
+            </div>
+
+            <button
+                class="w-full bg-purple-500 text-white py-2 rounded-lg 
+                       hover:bg-purple-600 transition duration-300 text-sm font-medium">
+                Create Card
+            </button>
+
+        </form>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
