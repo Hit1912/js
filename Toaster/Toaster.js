@@ -53,9 +53,10 @@ function createToaster(config){
         div.className = `toaster  ${config.theme === "dark"? "bg-gray-800 text-white" : "bg-white text-red-950 border-2 border-red-950"} 
          px-6 py-3 inline-block top-4 right-4 rounded-md pointer-event-none`;
     
-      toast.className = `${config.positionX === "left"? "left-10":"right-10"}
+      toast.className += ` ${config.positionX === "left"? "left-10":"right-10"}
       ${config.positionY === "bottom"? "bottom-10":"top-10"}`
 
+      
 
         div.textContent = noti;
 
@@ -68,7 +69,7 @@ function createToaster(config){
 }
  
 let toaster = createToaster({
-positionX: "left",
+positionX: "right",
 positionY: "bottom",
 theme: "light",
 duration: 3,
