@@ -110,4 +110,41 @@ console.log(p1);
 // function context --> window
 // method context with es5 fnc --> object
 // method context with es6 fnc --> Window
-//
+// arrow function inside es5 fnc ---> object
+// es5 fnc inside es5 fnc --> window
+// event handler context --> html element
+// class ---> blank object
+
+//Manual Binding
+// call ,apply ,bind
+// Function ne call karti vakhate this keyword ni value set karva mate call ,apply, bind method no upyog kariye chhiye
+
+let obj5 = {
+    name:"test10",
+    email:"a@a.com",
+
+}; // save this obj .into this keyword
+
+function temp_a(){
+    console.log(this);
+}
+
+// function.call(object_name) --> this keyword ni value set karva
+// mate call method no upyog kariye chhiye
+// temp_a.call(obj5);
+
+// function.bind(object_name) --> this keyword ni value set karva
+// mate bind method no upyog kariye chhiye
+// function.call(object_name) --> this keyword ni value set karva
+// mate call method no upyog kariye chhiye
+// temp_a.call(obj5);
+
+// function.apply(object_name) --> this keyword ni value set karva
+// mate apply method no upyog kariye chhiye
+// temp_a.apply(obj5);
+
+// function.bind(object_name) --> this keyword ni value set karva
+// mate bind method no upyog kariye chhiye
+let fnc = temp_a.bind(obj5);  // blank object create
+fnc();
+// console.log(fnc);
