@@ -1,69 +1,88 @@
 let form = document.querySelector("form");
+ 
 let username = document.querySelector("input[name='name']");
 let role = document.querySelector("input[name='role']");
 let bio = document.querySelector("input[name='bio']");
 let img = document.querySelector("input[name='img']");
-
-// method with this keyword
+ 
+let div = document.querySelector("#cardContainer");
+ 
 const UserManager = {
+ 
     users: [],
-    // form event
+ 
     init: function () {
-
+ 
+        // Load stored users when page loads
+        const storedUsers = localStorage.getItem("users");
+ 
+        if (storedUsers) {
+            this.users = JSON.parse(storedUsers);
+            this.renderUi();
+        }
+ 
         form.addEventListener("submit", this.submit.bind(this));
-        // console.log("this value",this);
     },
-
-    // submit form method
-
+ 
     submit: function (e) {
         e.preventDefault();
-        console.log("form submitted");
-        console.log("submit", this);
         this.addUser();
     },
-
-    // add user method
+ 
     addUser: function () {
-        console.log("add user", this);
-        this.users.push({
+ 
+        const newUser = {
             username: username.value,
             role: role.value,
             bio: bio.value,
-            img: img.value,
-        });
-        console.log(this.users);
-
+            img: img.value
+        };
+ 
+        this.users.push(newUser);
+ 
+        // Save to LocalStorage
+        localStorage.setItem("users", JSON.stringify(this.users));
+ 
         form.reset();
-        this.renderUI();
+ 
+        this.renderUi();
     },
-
-    // render ui
-    renderUI: function () {
-        console.log(this.users);
-        let div = document.querySelector(".users");
-
+ 
+    renderUi: function () {
+ 
+        div.innerHTML = "";
+ 
         this.users.forEach((data) => {
-            div.innerHTML = `<div
-        class="card bg-white/80 backdrop-blur rounded-2xl flex items-center justify-center flex-col gap-4 p-4"
-      >
-        <img
-          src="https://media.gettyimages.com/id/517443374/photo/mahatma-gandhi.webp?s=612x612&w=gi&k=20&c=LGspH3rCMWs7DzLRis6Wi90SK1rlybMJVqe6IjlLfLA="
-          alt="image"
-          class="w-72 h-72 rounded-full object-cover my-5 border-4 border-blue-100"
-        />
-        <h2
-          class="text-2xl font-bold text-blue-950 drop-shadow-xl drop-shadow-blue-100 mb-1"
-        >
-          Dogesh Bro
-        </h2>
-        <p class="text-xl font-medium text-gray-500">Web Developer</p>
-        <p class="px-4 text-center text-lg text-slate-400">
-          Lorem ipsum dolor sit amet consectetur adipiicing elit. Fugit, nam.
-        </p>
-      </div>`
+ 
+            div.innerHTML += `
+           
+            <div class="card bg-white max-w-sm w-full text-center border border-blue-200 rounded-2xl p-8 shadow-xl hover:scale-105 transition">
+ 
+                <img
+                src="${data.img}"
+                alt="image"
+                class="w-40 h-40 mx-auto object-cover rounded-full border-4 border-blue-200 drop-shadow-lg"
+                />
+ 
+                <h2 class="text-2xl text-slate-700 mt-4 font-bold">
+                ${data.username}
+                </h2>
+ 
+                <p class="text-lg text-orange-600 mt-2 font-semibold">
+                ${data.role}
+                </p>
+ 
+                <p class="text-sm text-gray-600 mt-3">
+                ${data.bio}
+                </p>
+ 
+            </div>
+           
+            `;
         });
-    },
+ 
+    }
+ 
 };
-
+ 
 UserManager.init();
