@@ -125,3 +125,19 @@ class User {
 let user = new User("test","test@test.com","abc@123");
 console.log("User",user);
 
+class Admin extends User {
+    constructor(name,email,password,rights){
+        super(name,email,password) // Extends class constructor -->super
+        this.role = "admin"
+        this.rights = rights;
+    }
+}
+
+let admin = new Admin(
+    "admin",
+    "admin@admin.com",
+    "abc@123",
+    "delete user ,edit user , create user",
+);
+console.log(admin);
+
