@@ -1,78 +1,71 @@
-// <!-- 10 USER DATA -->
-function userdata() {
-  fetch("https://jsonplaceholder.typicode.com/users")
-    .then((response) => response.json())
-    .then((data) => {
-      data.forEach((user) => {
-        renderUI(user);
-      });
-    })
-    .catch((error) => {
-      console.log("Error fetching data:", error);
-    });
+function getPosts() {
+
+fetch("https://jsonplaceholder.typicode.com/posts?_limit=30")
+.then((res) => res.json())
+.then((data) => {
+
+data.forEach((post) => {
+renderPost(post);
+});
+
+});
+
 }
 
-userdata();
+function renderPost(p){
 
-function renderUI(user) {
-  let container = document.querySelector(".main");
+let container = document.querySelector(".main");
 
-  container.innerHTML += `
-  
-  <div class="group perspective">
-    <div class="relative preserve-3d w-full h-72">
+container.innerHTML += `
+<div class="bg-white rounded-2xl shadow-md hover:shadow-2xl transition overflow-hidden flex flex-col">
 
-      <!-- Front Side -->
-      <div class="absolute inset-0 backface-hidden bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center justify-center hover:shadow-2xl transition">
+<!-- Header -->
+<div class="bg-gradient-to-r from-blue-500 to-purple-600 text-white p-4 flex justify-between items-center">
+<h2 class="font-semibold text-md line-clamp-2">
+${p.title}
+</h2>
 
-        <img 
-        src="https://ui-avatars.com/api/?name=${user.name}&background=random&size=128"
-        class="w-20 h-20 rounded-full shadow-md mb-3"
-        />
+<span class="bg-white text-purple-600 text-xs px-2 py-1 rounded-full font-bold">
+#${p.id}
+</span>
+</div>
 
-        <h2 class="text-lg font-bold text-gray-800">
-          ${user.name}
-        </h2>
+<!-- Body -->
+<div class="p-5 flex flex-col flex-grow">
 
-        <p class="text-gray-500">
-          @${user.username}
-        </p>
+<div class="flex items-center gap-3 mb-3">
+<img src="https://i.pravatar.cc/45?img=${p.userId}" 
+class="rounded-full border">
 
-        <p class="text-sm text-gray-400 mt-1">
-          ${user.email}
-        </p>
+<div class="text-sm">
+<p class="font-semibold text-gray-700">User ${p.userId}</p>
+<p class="text-gray-400 text-xs">Blog Author</p>
+</div>
+</div>
 
-        <span class="mt-3 text-xs bg-indigo-100 text-indigo-600 px-3 py-1 rounded-full">
-          ${user.address.city}
-        </span>
+<p class="text-gray-600 text-sm line-clamp-4 flex-grow">
+${p.body}
+</p>
 
-      </div>
+<!-- Actions -->
+<div class="flex justify-between items-center mt-5">
 
+<div class="flex gap-4 text-gray-400 text-sm">
+<span>❤️ 24</span>
+<span>💬 12</span>
+<span>🔗 Share</span>
+</div>
 
-      <!-- Back Side -->
-      <div class="absolute inset-0 rotate-y-180 backface-hidden rounded-2xl p-6 text-white
-      bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500
-      flex flex-col justify-center">
+<button class="bg-purple-500 text-white text-xs px-4 py-1.5 rounded-full hover:bg-purple-600">
+Read More
+</button>
 
-        <h2 class="text-xl font-bold mb-2">
-          ${user.company.name}
-        </h2>
+</div>
 
-        <p class="text-sm italic mb-3">
-          "${user.company.catchPhrase}"
-        </p>
+</div>
+</div>
+`;
 
-        <div class="text-sm space-y-1">
-          <p>📧 ${user.email}</p>
-          <p>📍 ${user.address.street}</p>
-          <p>🌆 ${user.address.city}</p>
-          <p>📞 ${user.phone}</p>
-        </div>
-
-      </div>
-
-    </div>
-  </div>
-
-  `;
 }
+
+getPosts();
