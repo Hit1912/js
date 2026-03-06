@@ -140,4 +140,3 @@ let admin = new Admin(
     "delete user ,edit user , create user",
 );
 console.log(admin);
-
